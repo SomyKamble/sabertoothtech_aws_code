@@ -1,0 +1,255 @@
+{% extends "main/base.html" %}
+{% block content %}
+{% load static %}
+<meta name="description" content="Web & custom software development company in India provides best in class Python Django development, Artificial Intelligence & Machine Learning consulting services">
+<meta name="keywords" content="Python Django Web Development Company, Python Django Web Development Services, Python Django Development Company, Django website development, Django web development, Django developers India, Sabertooth Technologies; best web development company, Python devlopment company in India, Website Development, Application Development, Custom Software Development,Python, Django, MongoDB, React Native, Node JS, Angular js, Amazon web services, Celery, Docker, Machine Learning, Artificial Intelligence">
+<link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+
+<!--START Hero Image Section -->
+<div id="particles-js"></div>
+
+<div class="slider-item overlay" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row slider-text align-items-center justify-content-center">
+            <div class="col-lg-12 text-center col-sm-12">
+                <p class=" ml11" id="line-1" >
+                    <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span class="letters">Going Digital,</span><br>
+                        <span class="letters2">&nbsp;Made Simpler</span>
+                    </span>  
+                </p>
+                <p class="mb-4" id="line-2" data-aos="fade-up" data-aos-delay="50">
+                    At Sabertooth Technologies, we deliver world-class products, 
+                    comprehensive analysis and efficient design solutions for your enterprise.
+                </p>
+                <p class="text-center text-white" id="reachoutbtn"><a href="{% url 'main:reachout' %}" class="btn btn-outline-white rounded" data-aos="fade-up" data-aos-delay="50"><span id="reachoutbtnText">Reach Out</span></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="{% static 'js/particles.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+<!--END Hero Image Section -->
+
+
+<!--START Why Hire Us section -->
+<div class="section m-0" style="background-color: black; margin-bottom:0;  ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 ml-auto mb-5 order-2" data-aos="fade-up" data-aos-delay="50">
+                <span class="d-block text-white text-center" id="title-1" style="margin-bottom: 4%;">
+                    WHY&nbsp;&nbsp;<span id="hire" style="text-shadow: 3px 3px blanchedalmond;">HIRE</span>&nbsp;&nbsp;US?
+                </span>
+                <div class="row text-center">
+                    <div class="hire col-lg-4 col-12">
+                        <img class="hire-img-1" src="{% static 'images/hire-2.svg'%}" data-aos="fade-right" data-aos-delay="50"/>
+                        <h4 class="hire-text text-white" data-aos="zoom-in-up">Commitment towards developing Quality End Products</h4>
+                    </div>
+                    <div class="hire col-lg-4 col-12">
+                        <img class="hire-img-2" src="{% static 'images/hire-4.svg'%}" data-aos="fade-down" data-aos-delay="50"/>
+                        <h4 class="hire-text text-white" data-aos="zoom-in-up">Expertise in Cutting-Edge Technologies</h4>
+                    </div>
+                    <div class="hire col-lg-4 col-12">
+                        <img class="hire-img-1" src="{% static 'images/hire-1.svg'%}" data-aos="fade-left" data-aos-delay="50"/>
+                        <h4 class="hire-text text-white" data-aos="zoom-in-up">Impeccable Customer Service</h4>
+                    </div>
+                </div>
+                <p class="text-justify text-center"  id="title-3">
+                    Convinced Enough? 
+                </p>
+                <div class="d-flex justify-content-center" ><img src={% static 'images/down-arrow-4.png' %} data-aos="fade-up" data-aos-delay="50" id="down-arrow-2"/></div>
+                <a href="{% url 'main:reachout' %}" class="d-flex justify-content-center btn rounded" style="background-color: white; color: black;"><span id="hireusbtntext">Let Sabertooth handle all your Digital Headaches!</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END Why Hire Us section -->
+
+
+
+<!--START Technologies section -->
+<div class="section" style="background-color:rgb(8, 8, 8); padding-top: 2%; padding-bottom: 3%;">
+    <div class="container" style="background-color:rgb(12, 12, 12);">
+        <h2 class="text-white" id="tech-stack">Striving to Serve Every Need !</h2>
+        <h4 class="text-white" id="tech-stack-2">With a large tech stack, <span style="font-weight: bold;">Sabertooth</span> ensures all your requirements are satisfied and your ideas come to life <span style="border-top: 1px solid white;">under one roof!</span></h4>
+        <div class="row">
+            {% for key,value in complete_records.items %}
+            <div class="col-lg-3 col-md-4 col-6 bg-outline-danger text-center my-4 service" data-aos="fade-up"
+                data-aos-delay="50">
+                <!-- <i class="fab fa-node-js fa-3x text-danger"></i> -->
+                <img src="{% static value.image %}" style="object-position:50% 50%;max-width:45%;object-fit:cover"
+                    class="img-fluid rounded-circle" alt="no image">
+                <h3 class="mt-4 text-white" id="tech-content-1" >{{key}}</h3>
+                <p class=" text-center" id="tech-content-2">{{ value.content }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        
+    </div>
+</div>
+<!--END Technologies section -->
+
+<div id="chartdiv"></div>
+
+<!-- START Testimonial Section (for later use) -->
+{% comment %} 
+<div class="section block-11" style="background-color:rgb(12, 12, 12);">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 text-center">
+                <h2 class="mb-4 section-title text-white" style="font-weight:bold;">Testimonial</h2>
+            </div>
+        </div>
+        <div class="nonloop-block-11 owl-carousel" style="background-color:rgb(8, 8, 8);">
+            <div class="item">
+                <div class="block-33 h-100">
+                    <div class="vcard d-flex mb-3">
+                        <div class="image align-self-center"><img src="{% static "images/person_1.jpg" %}"
+                                alt="Client photo"></div>
+                        <div class="name-text align-self-center">
+                            <h2 class="heading text-white" style="font-weight:bold;">Carl Smith</h2>
+                            <span class="meta">Customer Corp.</span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <blockquote>
+                            <p>&rdquo; Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat qui, ipsum
+                                debitis id
+                                reprehenderit ut soluta possimus consectetur asperiores totam veniam quasi molestiae.
+                                Animi doloribus
+                                accusamus eius ex laudantium vitae? &ldquo;</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="block-33 h-100">
+                    <div class="vcard d-flex mb-3">
+                        <div class="image align-self-center"><img src="{% static "images/person_1.jpg" %}"
+                                alt="Person here"></div>
+                        <div class="name-text align-self-center">
+                            <h2 class="heading text-white">Craig Darren</h2>
+                            <span class="meta">Customer Corp.</span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <blockquote>
+                            <p>&rdquo; Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, ut enim error
+                                molestias maxime
+                                deserunt voluptate doloribus nihil nesciunt id perferendis, doloremque earum architecto
+                                ab incidunt
+                                sunt
+                                corrupti. Consequuntur qui ullam voluptates sapiente quod esse eum. &ldquo;</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="block-33 h-100">
+                    <div class="vcard d-flex mb-3">
+                        <div class="image align-self-center"><img src="{% static "images/person_1.jpg" %}"
+                                alt="Person here"></div>
+                        <div class="name-text align-self-center">
+                            <h2 class="heading text-white">John Smith</h2>
+                            <span class="meta">Customer Corp.</span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <blockquote>
+                            <p>&rdquo; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ab?
+                                Asperiores dolore
+                                blanditiis quis sapiente soluta aliquid officiis. &ldquo;</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="block-33 h-100">
+                    <div class="vcard d-flex mb-3">
+                        <div class="image align-self-center"><img src="{% static "images/person_1.jpg" %}"
+                                alt="Person here"></div>
+                        <div class="name-text align-self-center">
+                            <h2 class="heading text-white">John Smith</h2>
+                            <span class="meta">Customer Corp.</span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <blockquote>
+                            <p>&rdquo; Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, accusamus? Porro
+                                fugit culpa
+                                consequuntur dolorum. &ldquo;</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endcomment %}
+<!-- END Testimonial Section -->
+
+
+
+<!-- START Get in Touch -->
+<div class="py-5" style="background-color:rgb(5, 5, 5);">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <h3 class="text-white mb-2 font-weight-normal" id="get-in-touch-1"  data-aos="fade-right" data-aos-delay="100">Ready to Innovate & Change the Game?
+                </h3>
+                <p class="mb-0" data-aos="fade-right" data-aos-delay="200"><a href="{% url 'main:contact' %}"
+                        class="btn btn-outline-white rounded px-3 py-2">Get In Touch</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Get in Touch -->
+
+<script>
+    // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml11 .letters');
+var textWrapper = document.querySelector('.ml11 .letters2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml11 .line',
+    scaleY: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 1000
+  })
+  .add({
+    targets: '.ml11 .line',
+    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+    translateX: [0, document.querySelector('.ml11 .letters2').getBoundingClientRect().width + 10],
+    easing: "easeOutExpo",
+    duration: 700,
+    delay: 100
+  }).add({
+    targets: '.ml11 .letter',
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 4000,
+    offset: '-=775',
+    delay: (el, i) => 34 * (i+1)
+  }).add({
+    targets: '.ml11',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+
+
+{% endblock content %}

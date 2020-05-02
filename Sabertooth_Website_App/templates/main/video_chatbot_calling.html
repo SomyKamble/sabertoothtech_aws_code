@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+
+    <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+
+    <meta charset="UTF-8">
+
+    <title>Video Calling</title>
+    <link href="{% static 'VideoCalling/assets/vendor_components/sweetalert/sweetalert.css'%}" rel="stylesheet" type="text/css">
+    <!-- Bootstrap 4.0-->
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'VideoCalling/assets/vendor_components/bootstrap/dist/css/bootstrap.css' %}">
+
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'VideoCalling/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css' %}">
+
+    <!-- Data Table-->
+    <link rel="stylesheet" type="text/css" href="{% static 'VideoCalling/assets/vendor_components/datatable/datatables.min.css' %}"/>
+
+    <!-- theme style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'VideoCalling/css/style.css' %} ">
+
+    <!-- Crypto Admin skins -->
+    <link rel="stylesheet" type="text/css" href="{% static 'VideoCalling/css/skin_color.css' %}">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'VideoCalling/css/custom.css'%}">
+
+</head>
+<body class="hold-transition light-skin sidebar-collapse fixed theme-classic">
+<div class="wrapper">
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <img class="logo" style="padding-left:100px;" width="160px" height="50px"
+                             src="{% static 'VideoCalling/image/icon1.png'%}" alt="Image not Found">
+                        <b><a class="navbar-brand" style="font-size:20px; padding-left:10px; font-family:Segoe Script"
+                              target="_blank">Video Calling App</a></b>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li style="padding-right:20px;" class="button_padding mr-3 pl-4 pl-md-0">
+                                    <a href="#" data-toggle="modal" style="color:white;" onclick="Copy();">Click to copy
+                                        Client Window URL</a>
+                                </li>
+                                <li style="padding-right:30px;" class="button_padding mr-3 pl-4 pl-md-0">
+                                    <a href="/video_calling/" class="myButton">Video Call</a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div class="container-full">
+        <!-- Main content -->
+        <div class="content-chat">
+
+            <div class="box">
+                <div class="box-header with-border">
+                    <center><h4 class="box-title" style="color:White;font-family:Comic Sans MS">Chatting Window</h4>
+                    </center>
+                </div>
+                <div class="messages" id="chatting">
+
+                </div>
+                <form class="footer" onsubmit="return false;">
+                    <input type="text" style=" width: 205px; height: 36px;" placeholder="Write your message..."/>
+                    <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+
+                </form>
+                <template data-template="message">
+                    <div class="message">
+                        <div style="color:black;" class="message__name"></div>
+                        <div class="message__bubble"></div>
+                    </div>
+                </template>
+
+                <script src="{% static 'VideoCalling/js/chat.js'%}"></script>
+
+                <!-- /.box -->
+
+            </div>
+        </div>
+        <!-- /.content -->
+    </div>
+
+</div>
+</div>
+
+
+<!-- <div class="content-wrapper"  >
+
+             <div class="row rounded p-15 h-200 bg-primary bg-temple-dark">
+                 <div class="col-md-2 col-lg-6 col-12">
+                  <div class="box">
+                   <div class="box-header with-border">
+                    <center><h4 class="box-title" style="color:black;font-family:Comic Sans MS">Host Client Window</h4></center>
+                   </div>
+                      <center><video class="bg-secondary rounded" id="localVideo" autoplay muted></video></center>
+               </div>
+
+             </div>
+                 <div class="col-md-2 col-lg-6 col-12">
+               <div class="box">
+                <div class="box-header with-border">
+                  <center><h4 class="box-title" style="color:black; Font-Family:Comic Sans MS">Remote Client Window</h4></center>
+                </div>
+                <div>
+                      <center><video class="bg-secondary rounded p-30 mb-10" id="remoteVideo" autoplay></video></center>
+                </div>
+
+               </div>
+
+             </div>
+             </div>
+
+ </div>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- js -->
+<script src="{% static 'VideoCalling/assets/vendor_components/jquery-3.3.1/jquery-3.3.1.js' %}"></script>
+<script src="{% static 'VideoCalling/assets/vendor_components/screenfull/screenfull.js' %}"></script>
+<script src="{% static 'VideoCalling/assets/vendor_components/popper/dist/popper.min.js' %}"></script>
+<script src="{% static 'VideoCalling/assets/vendor_components/bootstrap/dist/js/bootstrap.js' %}"></script>
+<script src="{% static 'VideoCalling/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
+<script src="{% static 'VideoCalling/assets/vendor_components/fastclick/lib/fastclick.js' %}"></script>
+<script src="{% static 'VideoCalling/assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js'%}"></script>
+<script src="{% static 'VideoCalling/assets/vendor_components/datatable/datatables.min.js' %}"></script>
+<script src="{% static 'VideoCalling/assets/vendor_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' %}"></script>
+<script src="{% static 'VideoCalling/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js' %}"></script>
+<!-- SlimScroll -->
+<script src="{% static 'VideoCalling/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js'%}"></script>
+<!-- FastClick -->
+<script src="{% static 'VideoCalling/assets/vendor_components/fastclick/lib/fastclick.js'%}"></script>
+<script src="{% static 'assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js'%}"></script>
+<script src="{% static 'VideoCalling/assets/vendor_components/jquery.peity/jquery.peity.js'%}"></script>
+<script src="{% static 'VideoCalling/assets/vendor_components/easypiechart/dist/jquery.easypiechart.js'%}"></script>
+<!-- Crypto Admin App -->
+<script src="{% static 'VideoCalling/js/template.js' %}"></script>
+<script src="{% static 'VideoCalling/js/dashboard.js' %}"></script>
+<script src="{% static 'VideoCalling/js/dashboard-chart.js' %}"></script>
+<script src="{% static 'VideoCalling/js/demo.js'%}"></script>
+
+
+</body>
+</html>

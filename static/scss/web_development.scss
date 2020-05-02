@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+body {
+    font-family: Montserrat,sans-serif;
+    background-color: rgb(8,8,8);
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
+  
+  >h1{
+    text-align:center;
+    margin-bottom: 30px;
+  }
+}
+
+$circle-width: 10rem;
+$icon-size: 45px;
+$circle-shadow: 0px 5px 10px rgba(0,0,0, 0.3);
+$color-scheme-1: linear-gradient(90deg, #F37A24, #F37A24);
+// $header-img: image-url('static/images/machine-learning.png', false, false)
+$color-scheme-2: linear-gradient(90deg, #8693AB, #BDD4E7);
+$color-scheme-3: linear-gradient(90deg, #8693AB, #BDD4E7);
+$color-1: #c01b1c;
+$color-2: #ea9826;
+$color-3: #058ba9;
+
+.newcontainer{
+  display: flex;
+  overflow: hidden;
+  margin-left: 10%;
+  margin-right: 10%;
+  @media (max-width: 767px){
+    flex-wrap: wrap;
+  }
+}
+.wrapper{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    // margin: 10px;
+    padding: 20px;
+    padding-top: 0px;
+    position: relative;
+    overflow: hidden;
+    
+    
+    @media (max-width: 767px){
+      flex: 0 0 100%;
+      margin-bottom: 35px;
+    }
+  
+    .circle{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      width: $circle-width;
+      height: $circle-width;
+      border-radius: 50%;
+      background-color: #000000;
+      position: relative;
+      margin: auto;
+      margin-right: 2%;
+      box-shadow: $circle-shadow;
+      @media (max-width: 767px){
+        margin-right: 12%;
+      }
+
+      &:after{
+        content: '';
+        position: absolute;
+        width: $circle-width;
+        height: ($circle-width / 4) * 5;
+        background-color: #000000;
+        border-radius: 50%;
+        top: 2px;
+        left: 4px;
+        z-index: -2;
+        transform: rotate(-25deg);
+        
+        box-shadow: $circle-shadow;
+      }
+    }
+  
+     &:nth-child(1) .circle{
+        background-image: $color-scheme-1;
+        &:after{
+          background-image: $color-scheme-1;
+        }
+       .inner-circle{
+           color: $color-1;
+         }
+      }
+      
+      &:nth-child(2) .circle{
+        background-image: $color-scheme-2;
+        &:after{
+          background-image: $color-scheme-2;
+        }
+        .inner-circle{
+           color: $color-2;
+         }
+      }
+      
+      &:nth-child(3) .circle{
+        background-image: $color-scheme-3;
+        &:after{
+          background-image: $color-scheme-3;
+        }
+        .inner-circle{
+           color: $color-3;
+         }
+      }
+  
+    .inner-circle{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $icon-size;
+      width: ($circle-width / 4) * 2.5;
+      height: ($circle-width / 4) * 2.5;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background-color: #ffffff;
+      box-shadow: $circle-shadow;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .content{
+      padding-top: $circle-width / 5;
+      padding-right: calc(25% + 15px);
+    }
+  
+    &:before{
+        content: '';
+        position: absolute;
+        top: 50px;
+        left: 75%;
+        height: 100%;
+        width: 30%;
+        z-index: -1;
+        background-color: rgb(8, 8, 8);
+        box-shadow: 0px 20px 10px rgba(190, 190, 190, 0.295);
+    }
+  
+    &:hover{
+      .inner-circle{
+        width: ($circle-width / 4) * 3;
+        height: ($circle-width / 4) * 3;
+        font-size: $icon-size + 10px; 
+      }
+    }
+}

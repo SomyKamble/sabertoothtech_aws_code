@@ -1,0 +1,278 @@
+{% extends "main/base.html" %}
+{% block content %}
+{% load static %}
+<meta name="description" content="Get in touch with us to know more about how we can help you with custom web & software development using top-notch technologies & use-friendly designs">
+<meta name="keywords" content="Best software development company, Python Django Web Development Company, Python Django Web Development Services, Python Django Development Company, Django website development, Django web development, Django developers India, Sabertooth Technologies; best web development company, Python devlopment company in India, Website Development, Application Development, Custom Software Development, Python, Django, MongoDB, React Native, Node JS, Angular js, Amazon web services, Celery, Docker, Machine Learning, Artificial Intelligence">
+<link rel="stylesheet" type="text/css" href="{% static "css/contact.css" %}">
+
+<style>
+  #chartdiv {
+    width: 100%;
+    height: 500px;
+}
+</style>
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/maps.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+<script src="//www.amcharts.com/lib/4/geodata/worldIndiaLow.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_dark);
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Define marker path
+var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z M9,15.93 c-3.83,0-6.93-3.1-6.93-6.93S5.17,2.07,9,2.07s6.93,3.1,6.93,6.93S12.83,15.93,9,15.93 M12.5,9c0,1.933-1.567,3.5-3.5,3.5S5.5,10.933,5.5,9S7.067,5.5,9,5.5 S12.5,7.067,12.5,9z";
+
+// Create map instance
+var chart = am4core.create("chartdiv", am4maps.MapChart);
+var interfaceColors = new am4core.InterfaceColorSet();
+
+// Set map definition
+// chart.geodata = am4geodata_worldLow;
+chart.geodata = am4geodata_worldIndiaLow;
+
+// Set projection
+chart.projection = new am4maps.projections.Mercator();
+
+// Add zoom control
+chart.zoomControl = new am4maps.ZoomControl();
+
+// Set initial zoom
+chart.homeZoomLevel = 100;
+chart.homeGeoPoint = {
+  latitude: 21.145800,
+  longitude: 79.088158
+};
+
+chart.events.on("ready", function(ev) {
+  chart.zoomToMapObject(polygonSeries.getPolygonById("ES"),1.5,true,2500);
+  
+});
+
+// Create map polygon series
+var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+polygonSeries.exclude = ["AQ"];
+polygonSeries.useGeodata = true;
+polygonSeries.mapPolygons.template.nonScalingStroke = true;
+
+// Add images
+var imageSeries = chart.series.push(new am4maps.MapImageSeries());
+var imageTemplate = imageSeries.mapImages.template;
+imageTemplate.tooltipText = "{title}";
+imageTemplate.nonScaling = true;
+
+var marker = imageTemplate.createChild(am4core.Sprite);
+marker.path = targetSVG;
+marker.horizontalCenter = "middle";
+marker.verticalCenter = "middle";
+marker.scale = 0.7;
+marker.fill = interfaceColors.getFor("alternativeBackground");
+
+imageTemplate.propertyFields.latitude = "latitude";
+imageTemplate.propertyFields.longitude = "longitude";
+imageSeries.data = [ {
+  "id": "nagpur",
+  "svgPath": targetSVG,
+  "title": "Nagpur",
+  "latitude": 21.145800,
+  "longitude": 79.088158,
+  "scale": 1
+}, {
+  "svgPath": targetSVG,
+  "title": "United States",
+  "latitude": 42.360081,
+  "longitude": -71.058884,
+  "scale": 0.5
+}, {
+  "svgPath": targetSVG,
+  "title": "Australia",
+  "latitude": -25.274399,
+  "longitude": 133.775131,
+  "scale": 0.5
+}, {
+  "svgPath": targetSVG,
+  "title": "Singapore",
+  "latitude": 1.3521,
+  "longitude": 103.8198,
+  "scale": 0.5
+}, {
+  "svgPath": targetSVG,
+  "title": "Malaysia",
+  "latitude": 4.2105,
+  "longitude": 101.9758,
+  "scale": 0.5
+}, {
+  "svgPath": targetSVG,
+  "title": "Africa",
+  "latitude": 13.1339,
+  "longitude": 27.8493,
+  "scale": 0.5
+}, {
+  "svgPath": targetSVG,
+  "title": "Europe",
+  "latitude": 48.856614,
+  "longitude": 2.352221,
+  "scale": 0.5
+}, {
+  "svgPath": targetSVG,
+  "title": "South America",
+  "latitude": -10.861639,
+  "longitude": -53.104038,
+  "scale": 0.5
+}, {
+  "svgPath": targetSVG,
+  "title": "Japan",
+  "latitude": 36.652302,
+  "longitude": 138.192093,
+  "scale": 0.5
+}];
+
+// Add lines
+var lineSeries = chart.series.push(new am4maps.MapLineSeries());
+lineSeries.dataFields.multiGeoLine = "multiGeoLine";
+
+var lineTemplate = lineSeries.mapLines.template;
+lineTemplate.nonScalingStroke = true;
+lineTemplate.arrow.nonScaling = true;
+lineTemplate.arrow.width = 4;
+lineTemplate.arrow.height = 6;
+lineTemplate.stroke = interfaceColors.getFor("alternativeBackground");
+lineTemplate.fill = interfaceColors.getFor("alternativeBackground");
+lineTemplate.line.strokeOpacity = 0.4;
+
+
+
+lineSeries.data = [ {
+  "multiGeoLine": [
+    [
+      { "latitude": 21.145800, "longitude": 79.088158 },
+      { "latitude": 42.360081, "longitude": -71.058884 }
+    ]
+  ]
+}, {
+  "multiGeoLine": [
+    [
+      { "latitude": 21.145800, "longitude": 79.088158 },
+      { "latitude": -25.274399, "longitude": 133.775131 }
+    ]
+  ]
+}, {
+  "multiGeoLine": [
+    [
+      { "latitude": 21.145800, "longitude": 79.088158 },
+      { "latitude": 1.3521, "longitude": 103.8198 }
+    ]
+  ]
+}, {
+  "multiGeoLine": [
+    [
+      { "latitude": 21.145800, "longitude": 79.088158 },
+      { "latitude": 4.2105, "longitude": 101.9758 }
+    ]
+  ]
+}, {
+  "multiGeoLine": [
+    [
+      { "latitude": 21.145800, "longitude": 79.088158 },
+      { "latitude": 13.1339, "longitude": 27.8493 }
+    ]
+  ]
+}, {
+  "multiGeoLine": [
+    [
+      { "latitude": 21.145800, "longitude": 79.088158 },
+      { "latitude": 48.856614, "longitude": 2.352221 }
+    ]
+  ]
+}, {
+  "multiGeoLine": [
+    [
+      { "latitude": 21.145800, "longitude": 79.088158 },
+      { "latitude": -10.861639, "longitude": -53.104038 }
+    ]
+  ]
+}, {
+  "multiGeoLine": [
+    [
+      { "latitude": 21.145800, "longitude": 79.088158 },
+      { "latitude": 36.652302, "longitude": 138.192093 }
+    ]
+  ]
+} ];
+}); // end am4core.ready()
+
+
+</script>
+
+
+<section class="contact-section section_padding" style="background-color: rgb(0, 0, 0);">
+    <p class="text-white" id="contact-title">GET IN TOUCH</p>
+    <!-- START Map Section -->
+    <div class="row"> 
+        <div class="col-lg-12">
+            <!-- <div class="embed-responsive embed-responsive-4by3 ">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.0946062871594!2d79.06423481475753!3d21.148632985933574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1ad125957d3%3A0x9d43bb2a4c415cc8!2sSabertooth%20Technologies!5e0!3m2!1sen!2sin!4v1576598332829!5m2!1sen!2sin"
+                    width="500" height="50" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div> -->
+
+            <div id="chartdiv"></div>
+            <p class="mapline">Sabertooth Technologies taking on the <span class="www">World Wide Web</span> and the <span class="www">Whole Wide World</span>...</p>
+        </div>
+    </div>
+    <!-- END Map Section -->
+
+    <!-- START Form Section -->
+    <div class="row d-flex justify-content-center" style="margin-top: 5%;">
+        <div class="col-lg-12" data-aos="fade-up" data-aos-delay="50">
+            
+            <form class="form-contact contact_form" action="{% url 'main:contact' %}" method="POST" id="contactForm">
+                {% csrf_token %}
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-4 col-12">
+                        <div class="form-group">
+                            <input class="form-control text-white border-dark" name="name" id="name" type="text"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
+                                placeholder='Name' required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <div class="form-group">
+                            <input class="form-control text-white border-dark" name="email" id="email" type="email"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'"
+                                placeholder='Email' required>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-12">
+                        <div class="form-group">
+                            <input class="form-control text-white border-dark mr-3" name="subject" id="subject"
+                                type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'"
+                                placeholder='Subject' required>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-12">
+                        <div class="form-group">
+                            <textarea class="form-control w-100 text-white border-dark" name="message" id="message"
+                                cols="30" rows="9" onfocus="this.placeholder = ''"
+                                onblur="this.placeholder = 'Enter Message'" placeholder='Type your message here...'
+                                required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group d-flex justify-content-center">
+                    <button type="submit" class="button button-contactForm btn_1">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- END Form Section -->
+</section>
+{% endblock %}

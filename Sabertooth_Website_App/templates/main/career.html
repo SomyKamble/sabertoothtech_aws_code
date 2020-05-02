@@ -1,0 +1,112 @@
+{% extends "main/base.html" %}
+{% block content %}
+{% load static %}
+<meta name="description" content="Kick off your career or take it to the next level by joining our team and contribute to making a future with boundless possibilities at Sabertooth Technologies.">
+<meta name="keywords" content="Sabertooth Career, Application Development Careers, Web development careers, Python development careers, Djnago development careers, Python, Django, MongoDB, React Native, Node JS, Angular js, Amazon web services, Celery, Docker, Machine Learning, Artificial Intelligence">
+<link rel="stylesheet" type="text/css" href="{% static "css/career.css" %}">
+
+<div class="bg-black">
+    <div class="container " >
+
+        <!-- START jumbotron -->
+        <div class="jumbotron" style="background-color: black;" data-aos="fade-up" data-aos-delay="50" >
+            <h1 class="display-4 text-white career-jumbo" style="padding-top: 15%;">Hello, there!</h1>
+            <p class="lead">Kick start your career at Sabertooth Technologies!</p>
+            <p class="lead-2">Here are some amazing opportunities for you!</p>
+            <a class="btn btn-outline-white btn-lg" href="{% url 'main:about' %}" role="button">Learn more</a>
+        </div>
+        <!-- END jumbotron -->
+
+
+        <!-- START Job Details -->
+        {% if jobs %}
+            {% for job in jobs %}
+            <div class="row" style="background-color: black;" data-aos="fade-up" data-aos-delay="250" >
+                <div class="card col-lg-12" style="background-color: #d8d5d5; margin-bottom: 2%;">
+                    <h5 class="card-header" style="color: black;">Jobs at Sabertooth Technologies</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ job.title }}</h5>
+                        <pre class="card-text" style="color: rgb(0, 0, 0);">{{ job.text }}</pre>
+                        <a href="" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-top: 2%;background-color: black;border-color: black;">Apply</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        {% else %}
+            <div class="row" style="background-color: black;">
+                <div class="card col-lg-12" style="background-color: #d8d5d5; margin-bottom: 2%;">
+                    <h5 class="card-header" style="color: black;">Jobs at Sabertooth Technologies</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">No New Jobs!</h5>
+                        <h6 class="card-text">Sorry! We aren't hiring right now. But keep an eye on this page for any future openings! </h6>
+                        <a href="/contact/" class="btn btn-primary" style="margin-top: 2%;background-color: black;border-color: black;">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        <!-- END Job Details -->
+
+       
+        <!-- START Apply Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content" style="background-color: rgb(255, 255, 255);">
+                <div class="modal-header">
+                  <h4 class="modal-title">Apply at Sabertooth Technologies</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <div class="modal-body">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                          <label for="name">Name</label>
+                          <input type="text" class="form-control" name="name" id="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="email">Email</label>
+                          <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="subject">Subject</label>
+                          <input type="text" class="form-control" name="subject" id="subject" placeholder="Job Title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">About</label>
+                            <input type="textarea" class="form-control" name="message" id="message" placeholder="What makes you perfect for this position?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="myfile">Resume (PDF only)</label>
+                            <input type="file" class="form-control" name="myfile" id="myfile" required>
+                        </div>
+                        <div class="d-flex justify-content-center" >
+                            <div class="loader" id="loaderapply1" style="display: none;"></div>
+                            <div id="loaderapply2" style="display: none;">
+                                <p  style="font-weight: bold;color: black;" >&nbsp;&nbsp;Please Wait...</p>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn" onclick="loadFunction()" style="margin-top: 5%;background-color: black; color: white;">Apply</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- END Apply Modal -->
+
+    </div>
+</div>
+
+<script>
+    function loadFunction(){
+         
+        if($('#name').val() != '' && $('#email').val() != '' && $('#subject').val() != '' && $('#message').val() != '' && $('#myfile').val() != ''){
+            document.getElementById('loaderapply1').style.display = "block";
+            document.getElementById('loaderapply2').style.display = "block";
+        }
+        
+    }
+</script>
+
+{% endblock %}

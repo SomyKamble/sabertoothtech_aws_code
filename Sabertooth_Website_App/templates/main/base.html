@@ -1,0 +1,237 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146850848-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-146850848-1');
+    </script>
+    <title>Sabertooth Technologies</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="{% static 'images/SabertoothLogo.jpg' %}">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/animate.css" %}">
+    <link rel="stylesheet" href="{% static "css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/jquery.fancybox.min.css" %}">
+    <link rel="stylesheet" href="{% static "fonts/ionicons/css/ionicons.min.css" %}">
+    <link rel="stylesheet" href="{% static "fonts/fontawesome/css/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "fonts/flaticon/font/flaticon.css" %}">
+    <link rel="stylesheet" href="{% static "css/aos.css" %}">
+    <link rel="stylesheet" href="{% static "css/jquery.fancybox.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/fl-bigmug-line.css" %}">
+    <link rel="stylesheet" href="{% static "css/owl.theme.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/bootstrap-datepicker.css" %}">
+    <link rel="stylesheet" href="{% static "css/mediaelementplayer.css" %}">
+    <link rel="stylesheet" href="{% static "css/magnific-popup.css" %}">
+    <link rel="stylesheet" href="{% static "css/jquery-ui.css" %}">
+    <!-- <script src="https://kit.fontawesome.com/c9be66f498.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=B612:400,700|Montserrat:400,600,700|Muli:400,800,900|Oswald:400,700|Poppins:400,400i,500,500i,800&display=swap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+
+    <style>
+        #logo_image{
+            width:12%;
+            height:12%;
+        }
+        .nav-link,.foot-subhead,#foot-head{
+            font-family: 'Muli', sans-serif;
+        }
+        .subitem-style{
+            color: #FFFFFF;
+            font-family: 'Muli', sans-serif;
+        }
+        #q-link {
+            text-decoration: none;
+        }
+
+    @media(max-width:576px){
+        #logo_image{
+            width:20%;
+            height:20%;
+        }
+        .foot-subhead{
+            font-size: 12px;
+        }
+        #foot-head{
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        .footlabel{
+            font-size: 6px;
+        }
+
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- START Header -->
+    <header role="banner" class="bg-black">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <!-- Company's Logo -->
+                <a href="{% url 'main:index' %}" id="logo_image" class="navbar-brand">
+                <img src="{% static "images/SabertoothLogo.png" %}"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
+                    aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-black" id="navbarsExample05">
+                    <ul class="navbar-nav pl-md-5 ml-auto">
+                        <li class="nav-item ml-auto mr-auto">
+                            <a class="nav-link active text-white" href="{% url 'main:index' %}" style="font-size: 17px; font-weight: bold;">Home</a>
+                        </li>
+                        <li class="nav-item dropdown ml-auto mr-auto">
+                            <a class="nav-link dropdown-toggle" href="{% url 'main:services' %}" id="dropdown04"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 17px; font-weight: bold;">Services</a>
+                            <div class="dropdown-menu" style="background-color: rgb(5,5,5);"  aria-labelledby="dropdown04">
+                                <a class="dropdown-item subitem-style ml-auto" href="{% url 'main:web_development' %}">Web Development</a>
+                                <a class="dropdown-item subitem-style ml-auto" href="{% url 'main:artificial_intelligence'%}">Artificial Intelligence</a>
+                                <a class="dropdown-item subitem-style ml-auto" href="{% url 'main:application_development' %}">Application Development</a>
+                                <a class="dropdown-item subitem-style ml-auto" href="{% url 'main:database_management' %}">Data Services</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown ml-auto mr-auto">
+                            <a class="nav-link dropdown-toggle" href="{% url 'main:product' %}" id="dropdown04"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 17px; font-weight: bold;">Our Work</a>
+                            <div class="dropdown-menu" style="background-color: rgb(5,5,5);"  aria-labelledby="dropdown04">
+                                <a class="dropdown-item subitem-style  ml-auto" href="{% url 'main:product_database_management' %}">Database Management</a>
+                                <a class="dropdown-item subitem-style  ml-auto" href="{% url 'main:product_neural_network' %}">Deep Learning</a>
+                                <a class="dropdown-item subitem-style ml-auto" href="{% url 'main:product_fintech' %}">Fintech</a>
+                                <a class="dropdown-item subitem-style ml-auto" href="{% url 'main:product_insight' %}">Insights</a>
+                            </div>
+                        </li>
+                        <li class="nav-item ml-auto mr-auto">
+                            <a class="nav-link" href="{% url 'main:about' %}" style="font-size: 17px; font-weight: bold;">About</a>
+                        </li>
+                        <li class="nav-item ml-auto mr-auto">
+                            <a class="nav-link" href="{% url 'main:career' %}" style="font-size: 17px; font-weight: bold;">Careers</a>
+                        </li>
+                        <li class="nav-item ml-auto mr-auto">
+                            <a class="nav-link" href="{% url 'main:contact' %}" style="font-size: 17px; font-weight: bold;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- END Header -->
+
+
+    <!-- START Pages Content -->
+    {% block content %}{% endblock content %}
+    <!-- END Pages Content -->
+
+
+    <!-- START Footer -->
+    <footer class="site-footer" role="contentinfo" style="background-color:rgb(12, 12, 12);padding-top: 50px;padding-bottom: 0px;">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-3 col-6 mb-0">
+                    <h3 class="mb-4 text-white" id="foot-head">Quick Links</h3>
+                    <ul class="foot-subhead list-unstyled footer-link">
+                        <li><a href="{% url 'main:about' %}" class="text-white" id="q-link">About</a></li>
+                        <li><a href="{% url 'main:services' %}" class="text-white" id="q-link">Services</a></li>
+                        <li><a href="{% url 'main:product' %}" class="text-white" id="q-link">Our Work</a></li>
+                    </ul>
+                </div>
+                <div class="foot-style col-md-3 col-6  mb-0">
+                    <h3 class="mb-4 text-white foot-head" id="foot-head">Services</h3>
+                    <ul class="foot-subhead list-unstyled footer-link">
+                        <li><a href="{% url 'main:web_development' %}" class="text-white" id="q-link">Web Development</a></li>
+                        <li><a href="{% url 'main:artificial_intelligence' %}" class="text-white" id="q-link">Artifical Intelligence</a></li>
+                        <li><a href="{% url 'main:application_development' %}" class="text-white" id="q-link">Application Development</a></li>
+                        <li><a href="{% url 'main:database_management' %}" class="text-white" id="q-link">Database Management</a></li>
+                    </ul>
+                </div>
+                <div class="foot-style col-md-3 col-6  mb-0">
+                    <h3 class="mb-4 text-white foot-head" id="foot-head">Products</h3>
+                    <ul class="foot-subhead list-unstyled footer-link">
+                        <li><a href="{% url 'main:product_database_management' %}" class="text-white" id="q-link">Database Management</a></li>
+                        <li><a href="{% url 'main:product_neural_network' %}" class="text-white" id="q-link">Deep Learning</a></li>
+                        <li><a href="{% url 'main:product_fintech' %}" class="text-white" id="q-link">Fintech</a></li>
+                        <li><a href="{% url 'main:product_insight' %}" class="text-white" id="q-link">Insight</a></li>
+                    </ul>
+                </div>
+                <div class="foot-style col-md-3 col-6 mb-0">
+                    <div class="mb-5">
+                        <h3 class="mb-4 text-white foot-head" id="foot-head">Let's Connect</h3>
+                        <ul class="foot-subhead list-unstyled footer-link quick-contact">
+                            <li class="d-block">
+                                <span class="d-block caption text-white">Address:</span>
+                                <span class="caption-text text-muted">H No: 336, B/701, Rajakothi Apartments, Civil
+                                Lines, Nagpur, Maharashtra - 440001</span>
+                            </li>
+                            <li class="d-block">
+                                <span class="d-block caption text-white">Phone:</span><span
+                                    class="caption-text text-muted" >+91 9175998424&nbsp;&nbsp;/&nbsp;&nbsp;+91 9175998527</span>
+                            </li>
+                            <li class="d-block">
+                                <span class="d-block caption text-white">Email:</span><span
+                                    class="text-muted">hr@sabertoothtech.in</span>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled footer-link d-flex footer-social">
+                            <li title="LinkedIn"><a href="https://www.linkedin.com/company/sabertoothtechnologies/about/"
+                                class="p-2 bg-dark"><span class="fa fa-linkedin text-white" ></span></a></li>
+                            <li title="Twitter"><a href="https://twitter.com/SabertoothTech1" class="p-2 bg-dark"><span
+                                class="fa fa-twitter text-white" ></span></a></li>
+                            <li title="Github"><a href="https://github.com/Sabertoothtech"
+                                class="p-2 bg-dark"><span class="fa fa-github text-white"></span></a></li>
+                            <li title="Instagram"><a href="https://www.instagram.com/sabertooth_technologies/"
+                                class="p-2 bg-dark"><span class="fa fa-instagram text-white"></span></a></li>
+                            <li title="Facebook"><a href="https://www.facebook.com/SabertoothTechchnologies/"
+                                class="p-2 bg-dark"><span class="fa fa-facebook text-white"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-white footlabel" style="justify-content: center;">
+                <div>
+                    Sabertooth Technologies
+                    &copy;
+                    2017 - 
+                    <span id="copyright">
+                        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+                    </span>
+                    All Rights Reserved
+                </div>
+            </div>
+        </div>
+        <!--<span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=rr71wG9NMnLOUeKBcm67v1tC4pRVOEjPFL68tN8fkzB7jcqzEjVdsfUSeZWS"></script></span>-->
+    </footer>
+    <!-- END footer -->
+</body>
+<!-- js files -->
+<script src="{% static "js/jquery-migrate-3.0.1.min.js" %}"></script>
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+<script src="{% static "js/popper.min.js" %}"></script>
+<script src="{% static "js/owl.carousel.min.js" %}"></script>
+<script src="{% static "js/jquery.waypoints.min.js" %}"></script>
+<script src="{% static "js/jquery.fancybox.min.js" %}"></script>
+<script src="{% static "js/jquery.stellar.min.js" %}"></script>
+<script src="{% static "js/aos.js" %}"></script>
+<script src="{% static "js/main.js" %}"></script>
+<script src="{% static "js/bootstrap-datepicker.min.js" %}"></script>
+<script src="{% static "js/jquery-ui.js" %} "></script>
+<script src="{% static "js/mediaelement-and-player.min.js" %}"></script>
+<script src="{% static "js/jquery.countdown.min.js" %}"></script>
+<script src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+</html>

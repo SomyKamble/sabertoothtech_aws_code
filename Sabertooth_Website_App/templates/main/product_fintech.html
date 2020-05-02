@@ -1,0 +1,78 @@
+{% extends "main/base.html" %}
+{% block content %}
+{% load static %}
+<meta name="description" content="We offer top financial technology solutions with our Fintech expertise. Our features financial applications comforts financial organizations to fulfil their business requirements.">
+<meta name="keywords" content="Django, Celery, RabbitMQ broker, KiteConnect API, Talib, Pandas and Numpy, AI for finance, market visualisation, fintech domain, stock charts">
+<link rel="stylesheet" type="text/css" href="{% static "css/product_fintech.css" %}">
+
+
+<!-- START Work Section -->
+<section class="our_service section_padding single_page_services" style="background-color: rgb(8, 8, 8);">
+    <div class="container" style="background-color: rgb(8, 8, 8);">
+      <p class="text-white d-flex justify-content-center ourwork">Our Work</p>
+      <h1 class="text-white d-flex justify-content-center heading" data-aos="fade-right" data-aos-delay="50">Fintech</h1>
+      <p class="text-white d-flex justify-content-center content" data-aos="fade-right" data-aos-delay="150">
+        Financial Technology (Fintech) refers to technology that seeks automation and improvement of financial operations and processes of a company along-with efficient delivery and use of financial services through specialized software and algorithms.
+        Dominate the world of finance with technology with our services!
+        Here is some of our work, both research and practical, in the Fintech field.
+      </p>
+        <div class="row">
+              <a href="https://github.com/Sabertoothtech/Liquidity-Analaysis" target="_blank">
+                <div class="col-lg-6 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white" id="work">Liquidity Analysis</p>
+                          <a href="https://github.com/Sabertoothtech/Liquidity-Analaysis" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                        </div>
+                    </div>
+                </div>
+              </a>
+              <a href="https://github.com/Sabertoothtech/Pairs-Trading" target="_blank">
+                <div class="col-lg-6 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white" id="work">Pairs Trading</p>
+                          <a href="https://github.com/Sabertoothtech/Pairs-Trading" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                      </div>
+                    </div>
+                </div>
+              </a>
+              <a href="https://github.com/Sabertoothtech/Merging-company-financial-NEWS-and-stock-market-data" target="_blank">
+                <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white" id="work">Merging Company Financial News and Stock Market Data</p>
+                          <a href="https://github.com/Sabertoothtech/Merging-company-financial-NEWS-and-stock-market-data" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                      </div>
+                    </div>
+                </div>
+              </a>
+              <a href="https://github.com/Sabertoothtech/Model-for-Stock-Prediction-using-quant-only" target="_blank">
+                <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white" id="work">Prediction of Stocks by making use of Quantitative Analysis</p>
+                          <a href="https://github.com/Sabertoothtech/Model-for-Stock-Prediction-using-quant-only" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                      </div>
+                    </div>
+                </div>
+              </a>
+              <a href="https://github.com/Sabertoothtech/Quantative-Analysis-Calculating-Breakpoints-on-stock-data" target="_blank">
+                <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white" id="work">Calculating Breakpoints on Stock Data using Quantative Analysis</p>
+                          <a href="https://github.com/Sabertoothtech/Quantative-Analysis-Calculating-Breakpoints-on-stock-data" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                      </div>
+                    </div>
+                </div>
+              </a>
+        </div>
+        <div class="row d-flex justify-content-center" id="developnowbtnrow">
+          <p class="text-center text-white" id="reachoutbtn"><a href="{% url 'main:reachout' %}" class="btn btn-outline-white rounded" data-aos="fade-down" data-aos-delay="50"><span id="developnowbtn">Develop Now</span></a></p>
+        </div>
+    </div>
+</section>
+<!-- END Work Section -->
+
+{% endblock %}

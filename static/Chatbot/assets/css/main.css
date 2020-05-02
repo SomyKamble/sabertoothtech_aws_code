@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
+
+.flamingoPink{
+    color: white;
+    background-color:#ff71b8;
+}
+.flamingoPink:hover{
+    color: white;
+    background-color: #ff4fa7;
+}
+.flamingoPink:active{
+    color: white;
+    background-color: #b5005b;
+}
+.flamingoPink:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgba(255, 255, 255, 0);
+}
+
+.flamingoPinkOutline{
+    color: #ff4fa7;
+    border-color: #ff4fa7;
+}
+.flamingoPinkOutline:hover{
+    background-color: #ff4fa7;
+    color: white;
+    border-color: #ff4fa7;
+}
+.flamingoPinkOutline:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgba(255, 255, 255, 0);
+}
+*{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    margin: 0 auto;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+  position: static;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.navbar{
+    font-family: 'Roboto Mono', monospace !important;
+    font-weight: 400 !important;
+    background-color: white;
+}
+#navbarNav{
+    flex-direction: row-reverse !important;
+}
+#navbarNav .navbar-nav {
+    align-items: center;
+}
+.navbar-light .navbar-nav .active > .nav-link{
+    color: #23272b !important;
+    font-weight: 600 !important;
+}
+#navbarNav .nav-item {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.navbarLogo {
+    width: 120px;
+}
+/* .homeSection{
+    height: 95vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+} */
+.domainSection{
+    padding-bottom: 200px;
+}
+.technologySection{
+    /* padding-bottom: 20%; */
+}
+.integrate{
+    padding-bottom: 200px;
+}
+.landingContentLeft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landingContentRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imageCentered{
+    width: 100%;
+}
+.overview{
+    display: block;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.overview p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.overview h1{
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.domainSection h1{
+    display: flex;
+    justify-content: center;
+}
+.domainSection h4{
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+}
+.integrate h1{
+    display: flex;
+    justify-content: center;
+}
+.integrate h4{
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+}
+.technologySection h1{
+    display: flex;
+    justify-content: center;
+}
+.technologySection h4{
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+}
+
+
+.jam{
+    font-size: 2rem !important;
+    padding-right: 5px;
+}
+.contact .card-header{
+    background-color: #222222;
+    color: white;
+    display: flex;
+    font-size: 1.8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+b {
+    font-size: 1.4rem;
+}
+.card-deck{
+    padding: 4% 10% 0 10%;
+}
+.card-text{
+    font-weight: 300;
+}
+.card:hover{
+    background-color: #f6f6f6;
+    cursor: default;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+    /* box-shadow: 0 .250rem 0.5rem rgba(0,0,0,.15) !important; */
+    box-shadow: 0 8px 14px 0 #bfcfdc !important;
+    -webkit-transition: all .2s ease-in;
+    }
+.technologyStack{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 20%;
+}
+
+#sticky-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: none;
+    background-color: #222222;
+  }
+  .contact{
+      position: relative;
+      padding-bottom: 10%;
+  }
+
+  .contact .card{
+    background-color: #222222;
+    bottom: 100px;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: hidden;
+  }
+  .contact .card-body{
+    padding: 3rem 3rem;
+    background: #fafafa;
+    border-radius: 0.5rem;
+}
+
+/* footer */
+.context-dark, .bg-gray-dark, .bg-primary {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+    color: #ffffff;
+}
+.nav-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rights span{
+    font-size: 0.7rem !important;
+    font-weight: 300 !important;
+} 
+.brand p{
+    font-weight: 700 !important;
+}
+.p-10{
+    padding-bottom: 5%;
+}
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+.contactButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.contactHeader{
+    padding: 10px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.contactButton .btn{
+    letter-spacing: 0.075em;
+}
+
+#integrate, #domain, #technology{
+    padding-top: 100px;
+}
+
+.footer{
+    background-color: #222222;
+    color: white;
+    display: inline-block;
+    padding-left: 8%;
+}
+.wrapper{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.homeLanding{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.greybg{
+    background-color: #222222;
+}
+
+@media only screen and (max-width: 600px) {
+    .landingContentRight{
+        display: none;
+    }
+    .technologyStack{
+        padding-bottom: 40%;
+    }
+    .footer{
+        justify-content: left;
+        align-items: flex-start;
+        padding-bottom: 5%;
+    }
+    .domainSection {
+        padding-bottom: 0px;
+    }
+    .technologySection h1 {
+        font-size: 1.6rem;
+    }
+    .navbar-brand {
+        margin-left: 0px;
+    }
+    .overview{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+    .card-text{
+        font-size: 14px;
+    }
+  }
+
+#buttonMargin{
+    margin-top: 50px;
+}

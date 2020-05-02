@@ -1,0 +1,172 @@
+{% extends "main/base.html" %}
+{% block content %}
+{% load static %}
+<meta name="description" content="Sabertooth Technologies provides you top-notch AI solutions & AI consulting services help your business to become smarter.">
+<meta name="keywords" content="Artificial Intelligence solution providers, AI Services, AI Solutions, AI apps developer, Artificial Intelligence, Object detection, facial recognition, Open CV, Open pose, Open alpr, yolo, user recommendation engine, reinforcement learning (gamification), virtual assistant, chat bot, NLP, automated trading MT4, interactive brokers, crypto , digital marketing optimisation, voice recognition, Python, Django, MongoDB, React Native, Node JS, Angular js, Amazon web services, Celery, Docker, Selenium, Machine Learning,  Sabertooth Technologies, Python Django service provider, Django service provider, Python service Provider, PyTorch, Theano, Caffe, Keras, Tensorflow">
+<link rel="stylesheet" type="text/css" href="{% static "css/artificial_intelligence.css" %}">
+
+<!--START Hero Image Section -->
+<div class="slider-item innerp overlay" data-stellar-background-ratio="0.5" style="background-image: url({% static 'images/artificial.png' %});">
+    <div class="container">
+        <div class="row slider-text align-items-center text-center">
+            <div class="col-lg-12 col-sm-12">
+                <h1 id="bigger" data-aos="fade-up" data-aos-delay="50">Artificial Intelligence</h1>
+                <p id="big" data-aos="fade-up" data-aos-delay="50">
+                    <span style="color: rgb(255, 255, 255);background-color: #14131398;">&nbsp;With AI, predict future trends, easily identify customer concerns and perform exhaustive data analytics for faster results and minimal human intervention.&nbsp;</span>                     
+                </p>
+                <img src={% static 'images/down-arrow.png' %} data-aos="fade-up" data-aos-delay="50" id="down-arrow"/>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END Hero Image Section -->
+
+<!--START Key Features Section-->
+<section class="our_service section_padding single_page_services" style="background-color: rgb(8, 8, 8); padding-top: 5%; padding-bottom: 8%;">
+    <div class="container" style="background-color: rgb(8, 8, 8);">
+        <h1 class="text-white text-center" id="title">Key Features</h1>
+        <div class="row ">
+            <div class="col-lg-4 col-sm-4 col-6" data-aos="fade-up" data-aos-delay="50" style="text-align: center;">
+                <div>
+                    <div class="text-white"  style="padding-bottom: 10px;">
+                        <span><img class="feature-img" src={% static 'images/secure-2.png' %} alt="no image"></span>
+                        <h4 class="text-white feature-content">Secure</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-6" data-aos="fade-up" data-aos-delay="50" style="text-align: center;">
+                <div>
+                    <div class="text-white"  style="padding-bottom: 10px;">
+                        <span><img class="feature-img" src={% static 'images/automatic.png' %} alt="no image"></span>
+                        <h4 class="text-white feature-content">Completly Automated /<br>Minimal Human Interaction</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-6" data-aos="fade-up" data-aos-delay="50" style="text-align: center;">
+                <div>
+                    <div class="text-white"  style="padding-bottom: 10px;">
+                        <span><img class="feature-img" src={% static 'images/smart.png' %} alt="no image"></span>
+                        <h4 class="text-white feature-content">Smart</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--END Key Features Section-->
+
+<!--START AI Section-->
+<!-- <section class="our_service section_padding single_page_services" style="background-color: rgb(8, 8, 8); padding-top: 20px;">
+    <div class="container" style="background-color: rgb(8, 8, 8);">
+        <div class="row">
+            {% for key,value in ai_list.basic.items %}
+            {% if forloop.counter|divisibleby:2 %}
+            <div class="" data-aos="fade-up" data-aos-delay="50">
+                <div class="single_feature">
+                    <div class="single_service text-white">
+                        <h2 class="mb-30 text-right text-white text-justify" id="title">{{ key }}</h2>
+                        <div class="row m-auto">
+                            <div class="col-md-9 col-12">
+                                <p class="text-justify" id="content">{{ value.text }}</p>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static value.image %}" alt="no image" class="w-50 img-fluid"  id="imageStyle2" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="" data-aos="fade-up" data-aos-delay="50">
+                <div class="single_feature">
+                    <div class="single_service text-white">
+                        <h2 class="mb-30 text-left text-white text-justify" id="title-2">{{ key }}</h2>
+                        <div class="row m-auto">
+                            <div class="col-md-3">
+                                <img src="{% static value.image %}" alt="no image" class="w-75 img-fluid" id="imageStyle" >
+                            </div>
+                            <div class="col-md-9 col-12 mt-sm-20">
+                                <p class="text-justify"id="content">{{ value.text }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section> -->
+<!--END AI Section-->
+
+<!--START Services Section-->
+<section class="our_service section_padding single_page_services" style="background-color: rgb(8, 8, 8); padding-top: 3%; padding-bottom: 8%;">
+    <div class="container" style="background-color: rgb(8, 8, 8);">
+        <h1 class="text-white text-center" id="title">Services</h1>
+        <div class="row">
+            <div class="col-lg-6 col-sm-12" data-aos="fade-up" data-aos-delay="50">
+                <h1 class="text-white service-title">MACHINE LEARNING</h1>
+                <p class="service-content">Machine Learning focuses on building intelligent computer systems that learns from data available to it without being explicitly programmed to do so. With our ML services, equip yourself with system that eliminates manual data entry, detects spam and performs predictive and financial analysis among others.</p>
+            </div>
+            <div class="col-lg-6 col-sm-12" data-aos="fade-up" data-aos-delay="250">
+                <h1 class="text-white service-title">PREDICTIVE ANALYTICS</h1> 
+                <p class="service-content">Predictive analytics is a type of data analytics that focuses on predicting future outcomes using historical data and analytics techniques like machine learning and statistical modeling. With Predictive Analytics, you can use past and current data to generate future insights with higher degree of precision, hence forecasting trends and behaviors in seconds.</p>  
+            </div>
+        </div>
+        <div class="row" style="margin-top: 5%;">
+            <div class="col-lg-6 col-sm-12" data-aos="fade-up" data-aos-delay="50">
+                <h1 class="text-white service-title">RECOMMENDATION ENGINES</h1>
+                <p class="service-content">A Recommendation Engine is a filtering system that analyses available data to predict and suggest products/services that a website user might be interested in. With our Recommendation Engine services, increase your conversion rate, enhance customer experience and increase retention and loyalty for your business.</p>
+            </div>
+            <div class="col-lg-6 col-sm-12" data-aos="fade-up" data-aos-delay="250">
+                <h1 class="text-white service-title">NATURAL LANGUAGE PROCESSING</h1> 
+                <p class="service-content">Natural Language Processing is a discipline of Artificial Intelligence that gives the machine the ability to understand, read and interpret human natural language in a manner that is significant. With NLP, leverage high efficiency and accuracy of documentation process and identify important information from huge databases with ease.</p>  
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center" style="margin-top: 5%;">
+            <div class="col-lg-6 col-sm-12" data-aos="fade-up" data-aos-delay="50">
+                <h1 class="text-white service-title">DEEP LEARNING</h1>
+                <p class="service-content">Deep Learning imitates the working of a human brain that has a capacity to learn from unstructured and unlabeled data. Deep Learning models can achieve state-of-art accuracy, sometimes exceeding human performance. These models scan the data, identifies features and combine them to learn further on its own without being explicitly told to do so and hence promoting faster learning.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--END Services Section-->
+
+<!--START Technology Section-->
+<div class="section" style="background-color:rgb(12, 12, 12);padding-top: 6%;padding-bottom: 3%;">
+    <div class="fade-up" style="background-color:rgb(12, 12, 12);">
+        <div class="row">
+            <div class="site-section-heading text-center mb-2 w-border col-md-6 mx-auto">
+                <h1 class=" text-white mb-3" id="title">Technology Stack</h1>
+            </div>
+        </div>
+        <div class="container fade-up" style="background-color:rgb(8, 8, 8);">
+            <div class="row">
+                {% for key,value in ai_list.techstack.items %}
+                <div class="col-md-3 col-lg-3 col-sm-4 col-4 bg-outline-dark text-center my-4 service" data-aos="fade-up" data-aos-delay="50">
+                    <img src="{% static value.image %}" style="object-position:50% 50%;max-width:45%; height:auto; object-fit:cover" class="img-fluid rounded-circle bg-dark border-danger" alt="no image">
+                    <h3 class="text-uppercase mt-4 text-white" id="tech-stack" >{{key}}</h3>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!--END Tehcnology Section-->
+
+<!-- START Get in Touch -->
+<div class="py-5" style="background-color:rgb(5, 5, 5);">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <h3 class="text-white mb-2 font-weight-normal" id="get-in-touch-1"  data-aos="fade-right" data-aos-delay="100">Ready to Innovate & Change the Game?
+                </h3>
+                <p class="mb-0" data-aos="fade-right" data-aos-delay="200"><a href="{% url 'main:contact' %}"
+                        class="btn btn-outline-white rounded px-3 py-2">Get In Touch</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Get in Touch -->
+{% endblock %}

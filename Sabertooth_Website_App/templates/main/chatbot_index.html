@@ -1,0 +1,351 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'Chatbot/assets/css/main.css' %}">
+
+
+    <title>ChatBot - Sabertooth Technologies</title>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand" href="https://www.sabertoothtech.in/"><img class="navbarLogo"
+                                                                       src="{% static 'Chatbot/assets/images/Black-SabertoothLogo.png' %}"
+                                                                       alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="#integrate">Integration</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" href="#domain">Domain</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#technology">Technology</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sticky-footer">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.sabertoothtech.in/reachout/" target="_blank">
+                    <button
+                            type="button" class="btn flamingoPink">Contact
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- Navbar End -->
+<div class="wrapper">
+    <div class="container-fluid">
+        <!-- sections start here -->
+        <div class="row ">
+            <div class="col-lg-12">
+                <div class="row homeLanding">
+                    <div class="col-lg-6 col-12">
+                        <div class="landingContentLeft">
+                                <span class="overview">
+                                    <h1>Creating experience, not just ChatBots.</h1>
+                                    <p>We create and deploy chatbots with unique interfaces tailored with feature-rich
+                                        templates
+                                        for your business. Under the umbrella of our cutting edge technology stack
+                                        inclusive
+                                        of
+                                        Google DialogFlow and Twilio, we attract largest user base and hence deliver
+                                        bottom-line
+                                        business success through ultimate scalability</p>
+                                    <button type="button" class="btn flamingoPinkOutline" id="buttonMargin"
+                                            onclick="myScrolling()">Learn
+                                        More</button>
+                                </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="landingContentRight">
+                            <img class="imageCentered img-fluid " src="{% static 'Chatbot/assets/images/bg.svg' %}"
+                                 alt="landing page image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-12 integrate" id="integrate">
+                <div>
+                    <h1>Integrate your ChatBot</h1>
+                    <h4>Allowing support to customers on WhatsApp through our ChatBot</h4>
+                </div>
+            </div>
+            <div class="col-lg-12"
+                style="display: flex; justify-content: center;align-content: center; padding: 50px;">
+                <img src="assets/images/botsapp.jpg" alt="">
+            </div> -->
+            <div class="col-lg-12 domainSection" id="domain">
+                <div>
+                    <h1>Where are we?</h1>
+                    <h4>The industries that we cater to in the digital world.</h4>
+
+                </div>
+                <div class="col-lg-12">
+                    <div class="card-deck">
+                        <div class="card">
+                            <div class="card-header bg-transparent"><span class="jam jam-shield-plus"></span>
+                                <b>Insurance</b>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">Chatbots enable insurance companies to find right product
+                                    and
+                                    quotes at any given instant, 24/7, for the customers. We integrate insurance
+                                    chatbots that would help your business process new claims and are at
+                                    customer's
+                                    disposal for anwering queries regarding immediate cover and the product.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header bg-transparent  "><span class="jam jam-store"></span>
+                                <b>Retail</b>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">Retail chatbots help your customers to locate and select a
+                                    product through easy navigation during any time of the day based on their
+                                    preferences. They also send out automated promotional alerts to your
+                                    customers
+                                    and track their buying behaviour for your insights and hence assure higher
+                                    revenues.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header bg-transparent  "><span class="jam jam-map-marker"></span>
+                                <b>Travel</b>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">Travel Chatbots makes personalized recommendations, show
+                                    pricing, provide assistance during travel like submitting travel insurance
+                                    claims and accept bookings and payments at any given instant. With features
+                                    of a
+                                    well integrated chatbot, you can acquire more users and deliver consistent
+                                    travel services at ease.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="card-deck">
+                        <div class="card">
+                            <div class="card-header bg-transparent  "><span class="jam jam-coin"></span>
+                                <b>Banking</b>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">A good integration of chatbots as part of the engagement
+                                    process can provide consumers with quick service and transaction support
+                                    through
+                                    personalized interactions. Banking chatbot enables more new account
+                                    generation
+                                    through good welcome development and providing better financial advice.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header bg-transparent  "><span class="jam jam-shopping-cart"></span>
+                                <b>E-Commerce</b>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">Using artificial intelligence to register
+                                    customer's preferences and generate a valuable, individualized shopping
+                                    experience. Chatbots have features that enables customer's to try various
+                                    products on before purchasing and make their own combinations hence giving
+                                    interactive experience. This platform provides buyers with opportunities as
+                                    well as increase brand visibility. </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header bg-transparent  "><span class="jam jam-car"></span>
+                                <b>Automobile</b>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">Retail chatbots help your customers to locate and select a
+                                    product through easy navigation during any time of the day based on their
+                                    preferences. They also send out automated promotional alerts to your
+                                    customers
+                                    and track their buying behaviour for your insights and hence assuring higher
+                                    revenues.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 technologySection" id="technology">
+                <div class="domain">
+                    <h1>Our Technology Stack</h1>
+                    <h4>We expertise in these technologies to develop the perfect ChatBot of your needs.</h4>
+                </div>
+            </div>
+            <div class="col-lg-12  technologyStack">
+                <div class="card-deck">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'Chatbot/assets/images/messenger.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Messenger Platform</h5>
+                            <p class="card-text">Messenger Platform enables your business to handle queries from
+                                customers. It also helps you in leveraging ads to bring people to your chatbot
+                                experience.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'Chatbot/assets/images/dialogflow.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Dialogflow</h5>
+                            <p class="card-text">DialogFlow by Google is a chatbot development platform that
+                                provides with graphical interface to manage flow of chat conversation. It also
+                                supports voice assistants like Google Assitant and Amazon Alexa.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'Chatbot/assets/images/ibm.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">IBM Watson Assistant</h5>
+                            <p class="card-text">IBM Watson Assistant is a question-and-answer system that knows
+                                when to find an answer from a knowledge database, hence, providing a dialogue
+                                interaction between the conversation system and users.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'Chatbot/assets/images/amazon.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Amazon Lex</h5>
+                            <p class="card-text">Amazon Lex processes voice or text input in conversation with your
+                                end-users and enables you to easily publish your voice/text chatbots to mobile
+                                devices, website applications and chat services.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'Chatbot/assets/images/microsoft.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bot Framework</h5>
+                            <p class="card-text">Microsoft Bot Framework enables developers to create, integrate and
+                                manage a wide range of bots and bot experiences. The tools available in this
+                                framework reduces the amount of code and coordination required to develop an
+                                'enterprise-ready' bot.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 greybg"></div>
+            <div class="col-lg-6" id="sticky-footer">
+                <div class="contact">
+                    <div class="card shadow">
+                        <div class="card-header bg-transparent">
+                            <b>Contact Sabertooth</b>
+                        </div>
+                        <div class="card-body">
+                            <div class="contactHeader">
+                                <h5 class="card-title" style="font-weight: 400;">
+                                    Whether you have a question about features, trials, pricing, need a
+                                    demo, or
+                                    anything else, our team is ready to answer all your questions!
+                                </h5>
+                            </div>
+                            <div class="contactButton">
+                                <a class="nav-link" href="https://www.sabertoothtech.in/reachout/"
+                                   target="_blank">
+                                    <button type="button"
+                                            class="btn btn-lg flamingoPink shadow-sm">GET IN TOUCH
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 greybg"></div>
+            <div class="col-lg-4 col-12 footer">
+                <div class="pr-xl-4"><a class="brand" href="https://www.sabertoothtech.in/"><img
+                        class="brand-logo-light p-10" src="{% static 'Chatbot/assets/images/White-SabertoothLogo.png' %}" alt=""
+                        width="140"></a>
+                    <p>Going Digital, Made Simpler. </p>
+                    <!-- Rights-->
+                    <p class="rights">
+                        <span class="copyright-year">2020</span>
+                        <span> . </span>
+                        <span>All Rights Reserved.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 footer">
+                <h5 class="p-10">Contacts</h5>
+                <dl class="contact-list">
+                    <dt>Address:</dt>
+                    <dd>H No: 336, B/701, Rajakothi Apartments, Civil Lines, Nagpur, Maharashtra - 440001</dd>
+                </dl>
+                <dl class="contact-list">
+                    <dt>Email:</dt>
+                    <dd><a href="mailto:#">hr@sabertoothtech.in</a></dd>
+                </dl>
+                <dl class="contact-list">
+                    <dt>Phone:</dt>
+                    <dd>
+                        <a href="tel:#">+91 9175998424</a>
+                        <a href="tel:#">+91 9175998527</a>
+
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-lg-4 col-12 footer">
+                <h5 class="p-10">Links</h5>
+                <ul class="nav-list">
+                    <li><a href="https://www.sabertoothtech.in/about/" target="_blank">About</a></li>
+                    <li><a href="https://www.sabertoothtech.in/services" target="_blank">Services</a>
+                    </li>
+                    <li><a href="https://www.sabertoothtech.in/products/" target="_blank">Our Work</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+        crossorigin="anonymous"></script>
+
+
+<!-- Optional JavaScript -->
+<script src="{% static 'Chatbot/assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

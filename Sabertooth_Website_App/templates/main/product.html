@@ -1,0 +1,112 @@
+{% extends "main/base.html" %}
+{% block content %}
+{% load static %}
+<meta name="description" content="We are providing world class IT Products, services and consulting to diversified range of business.">
+<meta name="keywords" content="Amazon web services, Google cloud Platform, Microsoft Azure, Google Cloud, iCloud , Alibaba Cloud, Cloud accelerators, cloud computing services, cloud computing business plan services, cloud computing cloud infrastructure services, cloud computing service, cloud computing solutions">
+<link rel="stylesheet" type="text/css" href="{% static "css/product.css" %}">
+
+<style>
+    
+</style>
+
+<!--START Hero Image Section -->
+<div id="particles-js" ></div>
+
+<div class="slider-item img-responsive">
+    <div class="row slider-text align-items-center justify-content-center text-center">
+        <div class="col-lg-12 col-sm-12 ">
+            <p class="ml11" id="line-1" >
+                <span class="text-wrapper">
+                    <span class="line line1"></span>
+                    <span class="letters">Our Work</span><br>
+                </span>  
+            </p>
+            <p class="mb-4" id="line-2" data-aos="fade-up" data-aos-delay="50" style="max-width: 75%;">
+                &nbsp;At Sabertooth Technologies we believe in solving problems through innovation and extensive collaboration by crafting ideas into new products. 
+                Here are some of the research projects, 
+                services and applications our team of experts have worked on and built for your perusal!&nbsp;
+            </p>
+            <p class="small">SEE OUR WORK</p>
+            <img src={% static 'images/down-arrow-3.png' %} id="down-arrow"/>
+        </div>
+    </div>
+</div>
+<!--END Hero Image Section -->
+
+<!--START Products part-->
+<div class="section" style="background-color: rgb(5, 5, 5); padding-top: 20px;">
+    <div class="container">
+        {% for key,value in product_list.items %}
+            {% if forloop.counter|divisibleby:2 %}
+            <div class="row row-class" style="background-color: rgb(0, 0, 0);" id="{{ key }}">
+                <div class="col-lg-6 col-8 order-2 " >
+                    <h1 class="d-block text-uppercase mt-2 text-white pt-4 text-center" id="prod-title" data-aos="fade-up" data-aos-delay="50" >{{ key }}</h1>
+                    <p class="text-justify" id="prod-content-1" data-aos="fade-up" data-aos-delay="50">{{ value.content }}</p>
+                    <p class="pt-5 button-class text-center"><a href="{% url value.anch %}" class="btn btn-outline-white rounded" id="button-style" data-aos="fade-up" data-aos-delay="50">Cases</a></p>
+                </div>
+                <div class="d-flex justify-content-center col-lg-6 col-4 order-1 p-0">
+                    <figure>
+                        <img src="{% static value.image %}" alt="Image" class="img-fluid" data-aos="fade-up" data-aos-delay="50">
+                    </figure>
+                </div>
+            </div>
+            {% else %}
+            <div class="row row-class" style="background-color: rgb(0, 0, 0);" id="{{ key }}">
+                <div class="col-lg-6 col-8">
+                    <h1 class="d-block text-uppercase text-white pt-4 text-center" id="prod-title" data-aos="fade-up" data-aos-delay="50">{{ key }}</h1>
+                    <p class="text-justify" id="prod-content-2" data-aos="fade-up" data-aos-delay="50">{{ value.content }}</p>
+                    <p class="pt-5 button-class text-center"><a href="{% url value.anch %}" class="btn btn-outline-white rounded" id="button-style" data-aos="fade-up" data-aos-delay="50">Cases</a></p>
+                </div>
+                <div class="d-flex justify-content-center col-lg-6 col-4 order-2 p-0">
+                    <figure>
+                        <img src="{% static value.image %}" data-aos="fade-up" data-aos-delay="50" alt="Image" class="img-fluid" >
+                    </figure>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<!--END Products part-->
+
+<script>
+    // Wrap every letter in a span
+  var textWrapper = document.querySelector('.ml11 .letters');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+  
+  anime.timeline({loop: true})
+  .add({
+    targets: '.ml11 .line',
+    scaleY: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 1000
+  })
+  .add({
+    targets: '.ml11 .line',
+    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+    easing: "easeOutExpo",
+    duration: 700,
+    delay: 100
+  }).add({
+    targets: '.ml11 .letter',
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 4000,
+    offset: '-=775',
+    delay: (el, i) => 34 * (i+1)
+  }).add({
+    targets: '.ml11',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+<script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script> 
+<script src="{% static 'js/particles.js' %}"></script>
+<script src="{% static 'js/app.js' %}" ></script>
+{% endblock %}

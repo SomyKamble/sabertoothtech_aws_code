@@ -1,0 +1,36 @@
+{% extends "main/base.html" %}
+{% block content %}
+{% load static %}
+<meta name="keywords" content="Tableau, web scraping,  web crawling, machine learning,  deep learning, Insights,">
+<link rel="stylesheet" type="text/css" href="{% static "css/product_insight.css" %}">
+
+
+<!-- START Work Section -->
+<section class="our_service section_padding single_page_services" style="background-color: rgb(8, 8, 8);">
+    <div class="container" style="background-color: rgb(8, 8, 8);">
+        <p class="text-white d-flex justify-content-center ourwork">Our Work</p>
+        <h1 class="text-white d-flex justify-content-center heading" data-aos="fade-right" data-aos-delay="50">Insights</h1>
+        <p class="text-white d-flex justify-content-center content" data-aos="fade-right" data-aos-delay="150">
+          A Fintech Product helping you predict the Indian stock prices based off the current news by implementing our knowledge and expertise in web scraping, 
+          web crawling, machine learning and deep learning along with Tableau.
+        </p>
+        <div class="row">
+              <a href="https://public.tableau.com/profile/adil.warsi#!/vizhome/NIFTYNEWSANDSTOCKDATAPUBLIC/Dashboard1?publish=yes" target="_blank">
+                <div class="col-lg-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white" id="work">Sabertooth Insights</p>
+                          <a href="https://public.tableau.com/profile/adil.warsi#!/vizhome/NIFTYNEWSANDSTOCKDATAPUBLIC/Dashboard1?publish=yes" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                      </div>
+                    </div>
+                </div>
+              </a>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center" id="developnowbtnrow">
+      <p class="text-center text-white" id="reachoutbtn"><a href="{% url 'main:reachout' %}" class="btn btn-outline-white rounded" data-aos="fade-down" data-aos-delay="50"><span id="developnowbtn">Develop Now</span></a></p>
+    </div>
+</section>
+<!-- END Work Section -->
+
+{% endblock %}

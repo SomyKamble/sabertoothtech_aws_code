@@ -1,0 +1,86 @@
+{% extends "main/base.html" %}
+{% block content %}
+{% load static %}
+<meta name="description" content="Helps you to facilitate the availability of textual and unstructured data for NLP models, NLP algorithms are used for processing textual data and provides properly cleaned & structured data for end user">
+<meta name="keywords" content="Machine Learning, Database Management, Data API, Python, Web crawling, web scraping, Data mining, Data analysis, Django, Bootstrap, MongoDB, Css, JQuery, JavaScript, NLP (natural language processing), Flask API">
+<link rel="stylesheet" type="text/css" href="{% static "css/product_database_management.css" %}">
+
+
+<!-- START Work Section -->
+<section class="our_service section_padding single_page_services" style="background-color: rgb(8, 8, 8);">
+    <div class="container" style="background-color: rgb(8, 8, 8);">
+        <p class="text-white d-flex justify-content-center ourwork">Our Work</p>
+        <h1 class="text-white d-flex justify-content-center heading" data-aos="fade-right" data-aos-delay="50">Data Management</h1>
+        <p class="text-white d-flex justify-content-center content" data-aos="fade-right" data-aos-delay="150">
+          Our Data Management services deliver efficient management of data, high data security and excellent data quality.
+          Tap into the full potential of the data available with & for you!
+          Here is some of our work, both research and practical, in the data management field.
+        </p>
+
+        <div class="row">
+              <a href="https://github.com/Sabertoothtech/Web-Scraping-and-Data-Mining" target="_blank">
+                <div class="col-lg-6 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white" id="work">Data Mining</p>
+                          <a href="https://github.com/Sabertoothtech/Web-Scraping-and-Data-Mining" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                        </div>
+                    </div>
+                </div>
+              </a>
+              <a href="https://github.com/Sabertoothtech/Text-Preprocessing-Cleaning-Data" target="_blank">
+                <div class="col-lg-6 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white" id="work">Data Cleaning</p>
+                          <a href="https://github.com/Sabertoothtech/Text-Preprocessing-Cleaning-Data" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                      </div>
+                    </div>
+                </div>
+              </a>
+              <a href="https://github.com/Sabertoothtech/Webscraping-of-Financial-News" target="_blank">
+                <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white" id="work">Web Scraping of Financial News</p>
+                          <a href="https://github.com/Sabertoothtech/Webscraping-of-Financial-News" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                      </div>
+                    </div>
+                </div>
+              </a>
+              <a href="https://github.com/Sabertoothtech/Extracting-Company-names-from-NEWS" target="_blank">
+                <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white" id="work">Company Name Extraction from News</p>
+                          <a href="https://github.com/Sabertoothtech/Extracting-Company-names-from-NEWS"  target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                      </div>
+                    </div>
+                </div>
+              </a>
+              <a href="https://github.com/Sabertoothtech/Categorising-Scraped-Financial-NEWS" target="_blank">
+                <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white" id="work">Scraped Financial News Categorisation</p>
+                          <a href="https://github.com/Sabertoothtech/Categorising-Scraped-Financial-NEWS" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                      </div>
+                    </div>
+                </div>
+              </a>
+        </div>
+
+        <div class="row d-flex justify-content-center" id="developnowbtnrow">
+          <p class="text-center text-white" id="reachoutbtn"><a href="{% url 'main:reachout' %}" class="btn btn-outline-white rounded" data-aos="fade-down" data-aos-delay="50"><span id="developnowbtn">Develop Now</span></a></p>
+        </div>
+    </div>
+</section>
+<!-- END Work Section -->
+
+<script>
+  $(document).ready(function () {
+      $("#card1").hide();
+  });
+</script>
+
+{% endblock %}

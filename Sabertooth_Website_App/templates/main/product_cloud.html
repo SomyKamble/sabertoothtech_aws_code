@@ -1,0 +1,45 @@
+{% extends "main/base.html" %}
+{% block content %}
+{% load static %}
+<style>
+    #title{
+        margin-bottom: 20px;
+        font-family: 'Muli', sans-serif;
+    }
+    #content{
+        font-family: 'Montserrat', sans-serif; 
+        font-size: 22px; 
+        text-align: justify;
+    }
+
+    @media(max-width: 576px){
+        #title{
+            font-size: 25px;
+        }
+        #content{
+            font-size: 15px;
+        }   
+    }
+</style>
+<section class="contact-section section_padding" style="background-color: rgb(0, 0, 0);padding-bottom: 70px;">
+    
+    <div class="row m-auto p-auto">
+
+        <div class="col-md-6 col-lg-5 my-3 m-auto ">
+            <div class="">
+                <img src="{% static 'images/CloudLogo.jpg' %}" />
+            </div>
+        </div>
+    
+        <div class="col-md-6 col-lg-7 my-3 m-auto ">
+            <h1 class="text-white" id="title">CLOUD</h1>
+            <p id="content">
+                Providing cloud based solutions to cater to your business needs and help solve your IT problems.</br></br>
+                Providing you with help in programming and operating on any cloud based platforms to help ease/ bring solutions to your problems.</br></br>
+                We work with platforms such as Microsoft Azure, Google Cloud, iCloud etc.</br></br>
+            </p>
+            <p class="pt-4"><a href='/contact/' class="btn btn-outline-white rounded" data-aos="fade-up" data-aos-delay="50">GET IN TOUCH</a></p>
+        </div>
+    </div>
+</section>
+{% endblock %}

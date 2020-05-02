@@ -1,0 +1,58 @@
+/* START Jumbotron */
+.display-4{
+    font-weight:bold; 
+    font-size:70px; 
+    color: rgb(155, 155, 155);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom:2%;
+}
+.lead{
+    font-weight:normal; 
+    font-size:35px; 
+    color: rgb(155, 155, 155);
+    font-family: 'Montserrat', sans-serif;
+}
+.lead-2{
+    font-weight:normal; 
+    font-size:18px; 
+    color: rgb(155, 155, 155);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5%;
+}
+/* END Jumbotron */
+
+
+.card-text{
+    color: black;
+}
+.form-group,.modal-title{
+    font-weight:bold; 
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+.loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #000000; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media(max-width: 576px){
+.display-4{
+    font-size:70px; 
+}
+.lead{
+    font-size:15px; 
+}
+.lead-2{
+    font-size:12px; 
+}
+}

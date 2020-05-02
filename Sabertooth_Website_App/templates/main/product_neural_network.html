@@ -1,0 +1,78 @@
+{% extends "main/base.html" %}
+{% block content %}
+{% load static %}
+<meta name="description" content="Leverage our expertise in Deep Learning to build cognitive business technology frameworks that act like a human being.  By diving further into complex data, we release huge open doors for your business and convey exact answers for spare expenses.">
+<meta name="keywords" content="Sentiment analysis, web scraping, web crawling, Deep Learning and Neural Networks, Machine Learning, Python, Django">
+<link rel="stylesheet" type="text/css" href="{% static "css/product_neural_network.css" %}">
+
+<!-- START Work Section -->
+<section class="our_service section_padding single_page_services" style="background-color: rgb(8, 8, 8);">
+    <div class="container" style="background-color: rgb(8, 8, 8);">
+      <p class="text-white d-flex justify-content-center ourwork">Our Work</p>
+      <h1 class="text-white d-flex justify-content-center heading" data-aos="fade-right" data-aos-delay="50">Deep Learning</h1>
+      <p class="text-white d-flex justify-content-center content" data-aos="fade-right" data-aos-delay="150">
+        Deep Learning learns from vast unstructured data drawn from sources like internet search engines and social media among others to use it for decision making (imitating functions of human brain), 
+        hence unraveling wealth of relevant information.
+        Take the advantages of Deep Learning to propel your business to the next level!
+        Here is some of our work, both research and practical, in the deep learning field.
+      </p>
+        <div class="row">
+              <a href="https://github.com/Sabertoothtech/Movie-Reviews-Sentiment-Analysis" target="_blank">
+                <div class="col-lg-6 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white" id="work">Movie Reviews Sentiment Analysis</p>
+                          <a href="https://github.com/Sabertoothtech/Movie-Reviews-Sentiment-Analysis" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                        </div>
+                    </div>
+                </div>
+              </a>
+              <a href="https://github.com/Sabertoothtech/Sentiment-using-AWS-comprehend" target="_blank">
+                <div class="col-lg-6 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white"  id="work">Sentiment Analysis - AWS Comprehend</p>
+                          <a href="https://github.com/Sabertoothtech/Sentiment-using-AWS-comprehend" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                      </div>
+                    </div>
+                </div>
+              </a>
+              <a href="https://github.com/Sabertoothtech/Deep-Learning-Model" target="_blank">
+                <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white"  id="work">Predicting Sentiment Value of text entered - Deep Learning</p>
+                          <a href="https://github.com/Sabertoothtech/Deep-Learning-Model" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                      </div>
+                    </div>
+                </div>
+              </a>
+              <a href="https://github.com/Sabertoothtech/NLP-Sentiment-Analysis-of-Financial-News" target="_blank">
+                <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white"  id="work">Sentiment Analysis of Financial News - Natural Language Processing</p>
+                          <a href="https://github.com/Sabertoothtech/NLP-Sentiment-Analysis-of-Financial-News" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                      </div>
+                    </div>
+                </div>
+              </a>
+              <a href="https://github.com/Sabertoothtech/TFIDF-Sentiment-Analysis" target="_blank">
+                <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="50" >
+                    <div class="single_feature" >
+                        <div class="single_service text-white" style="background-color: black;" >
+                          <p class="text-white"  id="work">Sentiment Analysis using Term Frequency - Inverse Document Frequency</p>
+                          <a href="https://github.com/Sabertoothtech/TFIDF-Sentiment-Analysis" target="_blank" class="btn_3 text-white" onclick="myFunction()" style="margin-top: -5%;">Know More</a>
+                      </div>
+                    </div>
+                </div>
+              </a>
+        </div>
+        <div class="row d-flex justify-content-center" id="developnowbtnrow">
+          <p class="text-center text-white" id="reachoutbtn"><a href="{% url 'main:reachout' %}" class="btn btn-outline-white rounded" data-aos="fade-down" data-aos-delay="50"><span id="developnowbtn">Develop Now</span></a></p>
+        </div>
+    </div>
+</section>
+<!-- END Work Section -->
+
+{% endblock %}
