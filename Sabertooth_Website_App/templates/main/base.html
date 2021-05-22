@@ -37,11 +37,22 @@
     <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=B612:400,700|Montserrat:400,600,700|Muli:400,800,900|Oswald:400,700|Poppins:400,400i,500,500i,800&display=swap">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
     <!-- Theme Style -->
-    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script type="application/ld+json">
+        { "@context" : "http://schema.org",
+          "@type" : "Organization",
+          "name" : "Sabertooth Technologies",
+          "url" : "https://www.sabertoothtech.in",
+          "sameAs" : [ "https://www.linkedin.com/company/sabertoothtechnologies/about/",
+            "https://twitter.com/SabertoothTech1",
+            "https://github.com/Sabertoothtech",
+            "https://www.instagram.com/sabertooth_technologies/",
+            "https://www.facebook.com/SabertoothTechchnologies/"]
+        }
+    </script>
 
     <style>
         #logo_image{
@@ -150,6 +161,8 @@
                         <li><a href="{% url 'main:about' %}" class="text-white" id="q-link">About</a></li>
                         <li><a href="{% url 'main:services' %}" class="text-white" id="q-link">Services</a></li>
                         <li><a href="{% url 'main:product' %}" class="text-white" id="q-link">Our Work</a></li>
+			<li><a href="{% url 'main:privacy' %}" class="text-white" id="q-link">Privacy Policy</a></li>
+			<li><a href="{% url 'main:terms' %}" class="text-white" id="q-link">Terms And Conditions</a></li>
                     </ul>
                 </div>
                 <div class="foot-style col-md-3 col-6  mb-0">

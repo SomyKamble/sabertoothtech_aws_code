@@ -30,6 +30,14 @@ def hashed(n, ciphertext):
     return result
 
 
+def privacy(request):
+    return render(request, 'main/privacy_policy.html')
+
+
+def terms(request):
+    return render(request, 'main/terms_&_condition.html')
+
+
 def sendmail(receiver, subject, message, name='', eaddress=''):
     if receiver == 'self':
         receiver = 'hr@sabertoothtech.in'
@@ -500,7 +508,7 @@ def product(request):
                 'content': "Powering exponential growth in the financial world by changing the game through innovation and technology.",
                 'image': 'images/FintechLogo.jpg',
                 'anch': 'main:product_fintech'},
-        # "CLOUD": 
+        # "CLOUD":
         # {'content': "Cloud designed for your business needs",
         #  'image': "images/CloudLogo.jpg",
         #  'anch': 'main:product_cloud'},
@@ -641,3 +649,8 @@ def video_calling(request):
 # Create your views here.
 def video_chatbot_calling(request):
     return render(request, 'main/video_chatbot_calling.html')
+
+
+# Create your views here.
+def webrtc(request):
+    return render(request, 'main/webrtc.html')

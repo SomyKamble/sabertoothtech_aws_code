@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700 &display=swap');
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Manjari', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Manjari', sans-serif;
+    font-weight: 400;
+    /* background: url('../images/path2.svg'); */
+    /* background-repeat: no-repeat; */
+    /* background-position-y: 78vh; */
+    /* background-position-x: center; */
+    /* background-size: cover; */
+}
+
+.bgImage {
+    background: url('../images/path2.svg');
+    background-repeat: no-repeat;
+    /* background-position-y: 78vh; */
+    /* background-position-x: center; */
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    font-family: 'Manjari', sans-serif;
+    font-weight: 700 !important;
+    font-size: 1.3rem;
+    background-color: white;
+}
+.container {
+    margin-top: 83px;
+}
+
+#navbarNav {
+    flex-direction: row-reverse !important;
+}
+#navbarNav .navbar-nav {
+    align-items: baseline;
+}
+#navbarNav .nav-item {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.navbarLogo {
+    width: 120px;
+}
+.navbar-light .navbar-nav .active > .nav-link {
+    color: #0E2549;
+}
+
+.btnCustomOrange {
+    background-color: #FF6D1A;
+    color: #fff;
+    border-radius: 50px;
+    padding: 5px 20px 1px;
+    font-size: 1.2rem;
+}
+
+.btnCustomOrange:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.btnCustomOrange:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+}
+
+.w7 {
+    font-weight: 700 !important;
+}
+/* first section */
+.heading h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    color: #0E2549;
+    margin-bottom: 0 !important;
+    padding-bottom: 1rem;
+
+}
+
+
+.fullHeight {
+    height: 90vh;
+}
+
+.blueText {
+    color: #0E2549;
+}
+.daj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gaj {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.landingImage img {
+    height: 550px;
+    width: 550px;
+    margin-bottom: 50px;
+}
+.footer {
+    background-color: #0E2549;
+    color: white;
+    padding-left: 8%;
+    height: 70vh;
+}
+.footer .row {
+    height: 70vh;
+}
+.sectionHeading {
+    font-weight: 700;
+    font-size: 4rem;
+    color: #0E2549;
+}
+
+/* .top150{
+    top: 150px;
+} */
+
+.spaceImg {
+    width: 70%;
+}
+
+.txt {
+    text-align: left;
+}
+
+.msg {
+    text-align: center;
+}
+.image {
+    width: 30%;
+}
+
+.image1 {
+    width: 20%;
+}
+
+.msg img {
+    width: 50%;
+}
+
+.pt-12 {
+    padding-top: 12rem;
+}
+.pb-12 {
+    padding-bottom: 12rem;
+}
+.pt-6 {
+    padding-top: 6rem;
+}
+.pb-6 {
+    padding-bottom: 6rem;
+}
+.p50 {
+    padding: 50px;
+}
+
+.customPadding {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.customPaddingR {
+    padding-right: 3rem;
+}
+.fb {
+    background-color: #f7f7f7;
+    border-radius: 20px;
+}
+.landingBack {
+    background-image: url('../images/Path3.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    height: 92vh;
+}
+/* .sectionHeading::before { 
+    display: block; 
+    content: " "; 
+    margin-top: -285px; 
+    height: 285px; 
+    visibility: hidden; 
+    pointer-events: none;
+  } */
+
+#tech {
+    padding-top: 200px;
+    margin-top: -200px;
+}
+#domain {
+    padding-top: 100px;
+    margin-top: -100px;
+}
+
+.bb {
+    border-bottom: 2px solid #f7f7f7;
+}
+.btnCustomGithub {
+    border-radius: 50px;
+}
+
+.main-mockup {
+    width: 100%;
+}
+.mobile-mockup {
+    display: none;
+}
+
+/* video chat css */
+#localVideo {
+    width: 200px;
+    height: 152px;
+    border-radius: 10px;
+    padding: 0;
+    position: relative;
+    top: 55px;
+}
+#remoteVideo {
+    width: 1050px;
+    height: 787px;
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: rgba(156, 172, 172, 0.1) 0 2px 2px, rgba(156, 172, 172, 0.1) 0 4px 4px, rgba(156, 172, 172, 0.1) 0 8px 8px, rgba(156, 172, 172, 0.1) 0 16px 16px, rgba(156, 172, 172, 0.1) 0 32px 32px, rgba(156, 172, 172, 0.1) 0 64px 64px;
+}
+
+/*  */
+
+footer {
+    color: #0E2549;
+}
+
+.landingPageMargin {
+    margin: 5rem;
+}
+.jitsi {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.auto {
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
+
+/* Media Queries */
+
+@media(max-width: 576px) {
+    .heading h1 {
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #0E2549;
+        margin-bottom: 0 !important;
+        font-size: 3rem;
+        padding-bottom: 0;
+    }
+    .heading {
+        padding-top: 2.5rem;
+    }
+    .landingBack {
+        background-image: none;
+    }
+    .landingImage {
+        display: none;
+    }
+    .landingPageMargin {
+        margin: 6rem 3rem 3rem;
+    }
+    .landingButtons .btnCustomOrange {
+        font-size: 1rem;
+    }
+    .landingButtons .btnCustomGithub {
+        font-size: 0.8rem;
+    }
+    .jitsi {
+        display: block;
+    }
+    .auto {
+        display: block;
+    }
+    #domain .sectionHeading {
+        text-align: center;
+        font-size: 3rem;
+    }
+    #tryNow .sectionHeading {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .pd-0 {
+        padding-top: 0 !important;
+    }
+    #localVideo {
+        width: 100px;
+        height: 76px;
+        border-radius: 10px;
+        padding: 0;
+        position: relative;
+        top: 50px;
+        left: 270px;
+    }
+    #remoteVideo {
+        width: 370px;
+        height: 279px;
+        border-radius: 10px;
+        padding: 0;
+        box-shadow: rgba(156, 172, 172, 0.1) 0 2px 2px, rgba(156, 172, 172, 0.1) 0 4px 4px, rgba(156, 172, 172, 0.1) 0 8px 8px, rgba(156, 172, 172, 0.1) 0 16px 16px, rgba(156, 172, 172, 0.1) 0 32px 32px, rgba(156, 172, 172, 0.1) 0 64px 64px;
+    }
+    .main-mockup {
+        display: none;
+    }
+    .mobile-mockup {
+        width: 100%;
+        display: block;
+    }
+
+}

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Video Chat Application using WebRTC">
+    <meta name="keywords" content="Sabertooth, Technologies, WebRTC, Videochat, Video, PeerJS, Chat, Messaging, Call">
+    <meta name="author" content="Sabertooth Technologies">
+
+    <title>Video Chat - Sabertooth Technologies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'WebRTC/css/space.css'%}">
+    <link rel="stylesheet" href="{% static 'WebRTC/css/main.css'%}">
+    <link rel="stylesheet" href="{% static 'WebRTC/css/custom.css'%}">
+    <!--<script src="../static/js/main.js"></script>-->
+    <!--<script src="../static/js/videochat.js"></script>-->
+
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+    <a class="navbar-brand"><img class="navbarLogo" src="{% static 'WebRTC/images/Black-SabertoothLogo.png'%}"
+                                          alt="Logo"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" onclick="topFunction()">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="ShowDiv('tech')">Technology</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="ShowDiv('domain')">Domain</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="ShowDiv('tryNow')">
+                    <button type="button" class="btn btnCustomOrange">Try Now!</button>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- Navbar End -->
+<div class="wrapper">
+
+    <div class="container-fluid landingBack" style="padding: 0%; margin: 0%;">
+        <!-- landing page section -->
+        <!-- <div class="bgImage"> -->
+        <div class="landingPageMargin">
+            <div class="row pb-5">
+                <div class="col-lg-6 col-12 daj">
+                    <div>
+                        <div class="heading pb-4">
+                            <h1>MAKING</h1>
+                            <h1>THE WORLD</h1>
+                            <h1>A SMALLER PLACE.</h1>
+                        </div>
+                        <div class="paragraph blueText pb-3">
+                            <p>
+                                From missed opportunities to missing immediate family functions along with
+                                emergency conference meetings to dozens of convulated e-mails,
+                                WebRTC provides users with secure & reliable Peer-to-Peer connection allowing you to
+                                make up for your absence with no lesser experience and better results. At Sabertooth
+                                Technologies, we integrate customised video-calling applications that foster elite
+                                peer to peer experience for all functionalities.
+                            </p>
+                        </div>
+                        <div class="landingButtons">
+                            <button type="button" class="btn btnCustomOrange"><a
+                                    style="color: white; text-emphasis: none; text-decoration: none;" onclick="ShowDiv('tryNow')">Try Now!</a></button>
+                            <button type="button"
+                                    class="btn btn-sm btn-outline-dark btnCustomGithub pl-4 pr-4 ml-3">
+                                <div class="mt-1">
+                                    <i class="lni lni-github-original"></i>&nbsp;&nbsp;Fork now!
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 daj">
+                    <div class="landingImage">
+                        <img src="{% static 'WebRTC/images/landingpage-bg.png' %}" alt="illustration">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ./landing page section -->
+    <div class="container">
+        <!-- What is under the Hood Section -->
+        <div class="row pt-6 fb pb-6">
+            <div class="col-lg-12 col-12 pb-5" id="tech">
+                <center>
+                    <h1 class="sectionHeading">What's under the hood?</h1>
+                </center>
+            </div>
+            <div class="col-sm-6 col-lg-6 col-12 pt-5 pb-5 bb">
+                <center><img class="image" src="{% static 'WebRTC/images/Webrtc.png'%}" alt="Image not found"></center>
+                <center><b>
+                    <h2 class="pt-5">WebRTC</h2>
+                </b></center>
+            </div>
+            <div class="col-sm-6 col-lg-6 col-12 pt-5 pb-5 bb">
+                <div class="txt">
+                    <p class="customPadding">WebRTC enables multiple peer connections which aims to transmit
+                        audio/video streams in many-tomany format hence supporting multi-user connectivity. It
+                        supplies real-time communication functionalities and is capable of pairing video conference
+                        with features like duration of call and user schedules.
+                        It can interact with other components of the application, allowing you to have all the tools
+                        and libraries necessary to incorporate elements for your business, giving you complete
+                        control of how your video-conference product works with complete user-security by encrypting
+                        all the data & providing a secure user experience.</p>
+                </div>
+            </div>
+            <div class="jitsi">
+                <div class="col-sm-6 col-lg-6 col-12 pt-5 pb-5 bb">
+                    <center><img class="image1" src="{% static 'WebRTC/images/jitsi.png'%}" alt="Image not found"></center>
+                    <center><b>
+                        <h2 class="pt-3">JITSI</h2>
+                    </b></center>
+                </div>
+                <div class="col-sm-6 col-lg-6 col-12 pt-5 pb-5 bb">
+                    <div class="txt">
+                        <p class="customPadding">JITSI is a set of free and open source projects that allows you to
+                            build and deploy secure videoconferencing solutions at ease for both web and mobile
+                            platform.
+                            The major benefits of using JITSI is that it has an open source, provides unlimited time
+                            and
+                            an entirely free conferencing.
+                            It further allows you to customise with configuration file or change the code as per
+                            your
+                            business needs.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-lg-6 col-12 pt-5 pb-5">
+                <center><img class="image" src="{% static 'WebRTC/images/peerjs.png'%}" alt="Image not found"></center>
+                <center><b>
+                    <h2 class="pt-3">PeerJS</h2>
+                </b></center>
+            </div>
+            <div class="col-sm-6 col-lg-6 col-12 pt-5 pb-5">
+                <div class="txt">
+                    <p class="customPadding">Working with WebRTC can be difficult which is simplified by PeerJS as
+                        it simplifies peer-to-peer data, audio and video calls.
+                        Equipped with nothing but an ID, a peer can create a secure and reliable P2P data or media
+                        stream connection to a remote peer hence making real time communication extremely simple.
+                    </p>
+                </div>
+            </div>
+            <!-- ./What is under the Hood Section -->
+        </div>
+        <!-- Why do we use them? -->
+        <div class="row pt-12 pb-12">
+            <div class="col-lg-12 col-12 pb-6 pt-5">
+                <center>
+                    <h1 class="sectionHeading">Why do we use them?</h1>
+                </center>
+            </div>
+            <div class="col-sm-4 col-lg-4 col-12 pt-3 pb-5">
+                <div class="msg">
+                    <img src="{% static 'WebRTC/images/fast.png'%}" alt="Image not found">
+                    <b>
+                        <h2 class="pt-5">Fast</h2>
+                    </b>
+                </div>
+            </div>
+            <div class="col-sm-4 col-lg-4 col-12 pt-3 pb-5">
+                <div class="msg">
+                    <img src="{% static 'WebRTC/images/secure.png'%}" alt="Image not found">
+                    <b>
+                        <h2 class="pt-5">Secure</h2>
+                    </b>
+                </div>
+            </div>
+            <div class="col-sm-4 col-lg-4 col-12 pt-3 pb-5">
+                <div class="msg">
+                    <img src="{% static 'WebRTC/images/reliable.png'%}" alt="Image not found">
+                    <b>
+                        <h2 class="pt-5">Reliable</h2>
+                    </b>
+                </div>
+            </div>
+        </div>
+        <!-- ./Why do we use them? -->
+        <!-- Spaces that we make smaller! -->
+        <div id="domain">
+            <div class="row fb">
+                <div class="col-lg-12 col-12 pb-6 pt-6">
+                    <h1 class="sectionHeading">Spaces that we make smaller!</h1>
+                </div>
+                <div class="col-sm-6 col-lg-6 col-12 pl-5 pb-5">
+                    <div class="txt">
+                        <b>
+                            <h2 class="pb-3 ">Conference Room</h2>
+                        </b>
+                        <p class="customPaddingR">A typical Conference room has a host and an audience where the
+                            host
+                            talks and the audience listens.
+                            The host can also invite an audience member to interact by sending an invite for co-host
+                            position.
+                            The host has the power to mute or unmute the co-host, and delete or add a co-host.
+                            All the changes made to the host or co-host positions are notified immediately to all
+                            the
+                            members involved.</p>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-6 col-12 daj pb-5">
+                    <img class="spaceImg" src="{% static 'WebRTC/images/icon1.png'%}" alt="Image not found">
+                </div>
+                <div class="auto">
+                    <div class="col-sm-6 col-lg-6 col-12 pl-5 pt-6">
+                        <div class="txt">
+                            <b>
+                                <h2 class="pb-3">Automated<br>Interactive Classroom</h2>
+                            </b>
+                            <p class="customPaddingR">In Automated Interactive Classroom, an AI teacher on the
+                                server
+                                automatically sends pre-recorded educational files to students.
+                                The students go through these files and answer questions by either clicking on an
+                                option
+                                or
+                                speaking into a microphone.
+                                The feedback is anaylsed by the AI teacher and respective actions are taken.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 col-12 daj pt-6">
+                        <img class="spaceImg" src="{% static 'WebRTC/images/icon2.png'%}" alt="Image not found">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-6 col-12 pt-6 pb-6 pl-5">
+                    <div class="txt">
+                        <b>
+                            <h2 class="pb-3">Lecture Hall</h2>
+                        </b>
+                        <p class="customPaddingR">In Lecture Hall any number of students can watch an online lecture
+                            at
+                            the same time and can 'raise their hands' to interact with the teacher.
+                            The queries and responses of the teacher can be seen by all the other students. Also in
+                            Lecture Hall, students can see and hear their teacher in real time.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-6 col-12 daj pt-6 pb-6 pt-0">
+                    <img class="spaceImg" src="{% static 'WebRTC/images/icon3.png'%}" alt="Image not found">
+                </div>
+            </div>
+        </div>
+
+        <!-- ./Spaces that we make smaller! -->
+    </div>
+    <!-- WebRTC Video Chat Integration -->
+    <div class="container-fluid" id="tryNow">
+        <!-- Main content -->
+        <div class="row pt-6 pb-6">
+            <div class="col-12 col-lg-12">
+                <h1 class="sectionHeading daj">Chat with anyone instantly!</h1>
+            </div>
+            <div class="col-lg-12 col-12 gaj">
+                <div class="box" style="width:100%">
+                    <div class="box-body" style="height: 50px;">
+                        <video id="localVideo" autoplay muted></video>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-body">
+                        <video id="remoteVideo" autoplay></video>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <div class="col-lg-12 daj">
+                <button type="button" class="btn btn-lg btnCustomOrange mt-5 pl-5 pr-5 pt-3 pb-2">
+                    <a style="color: white; text-emphasis: none; text-decoration: none; font-size: 1.5rem;" onclick="ShowDiv('tryNow')">
+                        Invite to Chat
+                    </a>
+                </button>
+            </div>
+        </div>
+        <div class="col-12 col-lg-12 pt-6 mockup">
+                <h1 class="sectionHeading daj">Also try our mobile application!</h1>
+            </div>
+            <div class="col-lg-12 col-12 daj">
+                <img class="main-mockup" src="{% static 'WebRTC/images/main-mockup.png' %}">
+                <img class="mobile-mockup" src="{% static 'WebRTC/images/mobile-mockup.png' %}">
+            </div>
+            <div class="col-lg-12 col-12 daj pb-6 pt-3">
+                <button type="button" class="btn btn-lg btnCustomOrange mt-5 pl-5 pr-5 pt-3 pb-2">
+                    <a style="color: white; text-emphasis: none; text-decoration: none; font-size: 1.2rem;" href="#">
+                        Download Application
+                    </a>
+                </button>
+            </div>
+        <!-- /.content -->
+    </div>
+    <!-- ./WebRTC Video Chat Integration -->
+    <div class="container">
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <img class="brand-logo-light p-10  pb-3" src="{% static 'WebRTC/images/Black-SabertoothLogo.png' %}"
+                         alt="" width="140"></a>
+                    <p>Going Digital, Made Simpler. </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="w7">About</h4>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <a class="text-muted" href="https://www.sabertoothtech.in/about/"
+                               target="_blank">About</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="https://www.sabertoothtech.in/services"
+                               target="_blank">Services</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="https://www.sabertoothtech.in/products/" target="_blank">Our
+                                Work</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="w7">Contacts</h4>
+                    <ul class="list-unstyled text-small">
+                        <!-- <li class="text-muted"><b>Email</b></li> -->
+                        <li>
+                            <a class="text-muted" href="mailto:#">hr@sabertoothtech.in</a>
+                        </li>
+                        <!-- <li class="text-muted"><b>Call</b></li> -->
+                        <li>
+                            <a href="tel:#">+91 9175998424</a><br>
+                            <a href="tel:#">+91 9175998527</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</div> <!-- container end -->
+
+</div>
+
+<script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+<!-- Optional JavaScript -->
+<script src="{%static 'WebRTC/js/main.js' %}"></script>
+<script src="{%static 'WebRTC/js/videochat.js'%}"></script>
+
+<script>
+    function ShowDiv(divname) {
+        $('html, body').animate({
+            scrollTop: $("#"+divname).offset().top
+        }, 500);
+    }
+</script>
+
+</body>
+
+</html>

@@ -23,6 +23,9 @@ urlpatterns = [
     path('chatbot/',views.chatbot,name='chatbot'),
     path('video_calling/',views.video_calling,name='video_calling'),
     path('video_chatbot_calling/',views.video_chatbot_calling,name='video_chatbot_calling'),
+    path('webrtc/',views.webrtc,name='webrtc'),
+    path('privacy/',views.privacy,name='privacy'),
+    path('terms/',views.terms,name='terms'),
 ]
 
 

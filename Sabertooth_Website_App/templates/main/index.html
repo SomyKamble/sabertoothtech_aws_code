@@ -1,6 +1,31 @@
 {% extends "main/base.html" %}
 {% block content %}
 {% load static %}
+<style>
+    #owl-demo .item {
+      margin: 3px;
+    }
+
+    #owl-demo .item img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    #owl-demo .owl-item .img-const {
+      width: 200px !important;
+      height: 200px !important;
+      margin: 0 auto;
+    }
+
+    #owl-demo .owl-item .img-width {
+      width: 200px !important;
+      height: 200px !important;
+      margin: 0 auto;
+    }
+  </style>
+<link rel="stylesheet" href="{% static "css/owl.carousel.css" %}">
+<link rel="stylesheet" href="{% static "css/owl.theme.css" %}">
 <meta name="description" content="Web & custom software development company in India provides best in class Python Django development, Artificial Intelligence & Machine Learning consulting services">
 <meta name="keywords" content="Python Django Web Development Company, Python Django Web Development Services, Python Django Development Company, Django website development, Django web development, Django developers India, Sabertooth Technologies; best web development company, Python devlopment company in India, Website Development, Application Development, Custom Software Development,Python, Django, MongoDB, React Native, Node JS, Angular js, Amazon web services, Celery, Docker, Machine Learning, Artificial Intelligence">
 <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
@@ -208,11 +233,56 @@
                 <p class="mb-0" data-aos="fade-right" data-aos-delay="200"><a href="{% url 'main:contact' %}"
                         class="btn btn-outline-white rounded px-3 py-2">Get In Touch</a></p>
             </div>
-        </div>
+        </div><br>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+                <h3 class="text-white mb-2 mt-5 font-weight-normal" id="get-in-touch-1"  data-aos="fade-right" data-aos-delay="100">Sabertooth is the industries trusted partner
+                </h3>
+            </div>
+          <div id="owl-demo" class="owl-carousel">
+
+            <div class="item">
+              <a rel="nofollow" href="https://wadline.com/mobile/us" target="_blank" rel="noopener noreferrer"><img
+                  class='img-const' src="{% static 'main_images/wadline.png' %}" alt="badge"></a>
+
+            </div>
+            <div class="item">
+              <a rel="nofollow" target="_blank"
+                href="https://www.goodfirms.co/company/sabertooth-technologies"><img
+                  class='img-const' style="width:200px" src="{% static 'main_images/goodfirms.png' %}" alt="GoodFirms Badge"></a>
+
+            </div>
+            <div class="item">
+              <a rel="nofollow" href="https://selectedfirms.co/companies/web-development/india" target="_blank"><img
+                  class='img-width' src="{% static 'main_images/selected-firms.png' %}"></a>
+            </div>
+            <div class="item">
+              <a rel="nofollow" href="https://topfirms.co/companies/nodejs-development/dubai-uae" target="_blank"><img
+                  class='img-width' src="{% static 'main_images/topFirms.png' %}" alt="Web Development Companies"></a>
+
+            </div>
+            <div class="item">
+              <a rel="nofollow" target="_blank"
+                href="https://www.topdevelopers.co/directory/big-data-analytics-companies"><img class='img-const'
+                  src="{% static 'main_images/top-developers.png' %}" alt="Big Data Analytics Companies"
+                  title="Big Data Analytics Companies" style="height:200px;width:200px"></a>
+
+            </div>
+            <div class="item">
+              <a rel="nofollow" target=_blank href="https://techimply.com//services/testing-services">
+                <img class='img-const' src="{% static 'main_images/techImply.png' %}" style="width:200px"></a>
+            </div>
+          </div>
+
+      </div>
     </div>
+
 </div>
 <!-- END Get in Touch -->
-
+<script src="{% static 'js/owl.carousel.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
 <script>
     // Wrap every letter in a span
 var textWrapper = document.querySelector('.ml11 .letters');
@@ -248,6 +318,16 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 1000
   });
+
+    $(document).ready(function () {
+
+      $("#owl-demo").owlCarousel({
+        items: 4,
+        lazyLoad: true,
+        navigation: false
+      });
+
+    });
 </script>
 
 
